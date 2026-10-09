@@ -1,12 +1,17 @@
 ## Hi, I'm Jack 👋
 
-Software QA Engineer working on network security,
-test automation, and AI-powered engineering tools.
+Software QA Engineer focused on **network security, automation, and systems engineering**.
 
-Interested in:
-- AI Agents & LLM Evaluation
-- Security Testing & Automation
-- Distributed Systems
-- Open Source
+Currently exploring the intersection of **AI Agents, LLM Evaluation, and Security Testing**.
 
-Always curious. Always building.
+### 🔬 Areas of Interest
+- AI Agents & Multi-Agent Systems
+- LLM Evaluation & Agentic QA
+- Network Security & Test Automation
+- Distributed Systems & Infrastructure
+- Open Source Engineering
+
+### 🛠️ Tech
+Python · Go · Linux · Docker · pytest · Networking · Security
+
+*Always curious. Always building.*
