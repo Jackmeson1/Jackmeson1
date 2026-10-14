@@ -3,6 +3,7 @@
 The SVGs animate with CSS only (no script), and their resting state is the final frame, so static renderers and
 prefers-reduced-motion both show the finished picture.
 """
+from html import escape
 from pathlib import Path
 
 FACTS = {
@@ -198,12 +199,82 @@ def workflow(p):
 """
 
 
+# Merged upstream PRs by area. Size: "M" = 100+ changed lines, "S" = under 100. "R" marks a release regression
+# found by bisecting a release pair. Update when PRs merge (sizes from `gh pr view N --json additions,deletions`).
+LEDGER = [
+    ("storage & downloads", "AIBrix", ["M", "S", "M", "S", "S", "S", "M"]),
+    ("gateway & routing", "AIBrix · Semantic Router", ["M", "M", "M", "M"]),
+    ("orchestration", "AIBrix", ["S", "S", "M", "M"]),
+    ("autoscaling", "AIBrix", ["S", "M", "S"]),
+    ("deployment config", "GPUStack · AIBrix", ["S", "S", "SR"]),
+    ("batch API", "AIBrix", ["MR", "M"]),
+    ("dev tooling", "SQLFluff · REA", ["S", "S"]),
+]
+
+
+def ledger(p):
+    """Every merged upstream PR as a block, grouped by area and coloured by size."""
+    total = sum(len(r[2]) for r in LEDGER)
+    medium = sum(1 for r in LEDGER for b in r[2] if b.startswith("M"))
+    regress = sum(1 for r in LEDGER for b in r[2] if b.endswith("R"))
+    x_lab, x_bar, unit, bw, bh = 44, 236, 34, 28, 14
+    y0, step = 116, 30
+    rows, k = [], 0
+    for i, (area, where, blocks) in enumerate(LEDGER):
+        y = y0 + i * step
+        cells = []
+        for j, b in enumerate(blocks):
+            x = x_bar + j * unit
+            cls = "blk m" if b.startswith("M") else "blk s"
+            mark = (f'<path d="M{x + bw / 2} {y - bh - 9}l4 4-4 4-4-4z" class="reg"/>' if b.endswith("R") else "")
+            cells.append(f'<g class="pop" style="animation-delay:{0.35 + k * 0.05:.2f}s">'
+                         f'<rect x="{x}" y="{y - bh + 2}" width="{bw}" height="{bh}" rx="3" class="{cls}"/>{mark}</g>')
+            k += 1
+        end = x_bar + len(blocks) * unit
+        rows.append(
+            f'<text x="{x_lab}" y="{y}" class="area">{escape(area)}</text>{"".join(cells)}'
+            f'<text x="{end + 4}" y="{y}" class="cnt">{len(blocks)}</text>'
+            f'<text x="836" y="{y}" class="where" text-anchor="end">{where}</text>'
+        )
+    w, h = 880, y0 + (len(LEDGER) - 1) * step + 44
+    return f"""<svg xmlns="http://www.w3.org/2000/svg" width="{w}" height="{h}" viewBox="0 0 {w} {h}" role="img"
+  aria-labelledby="t d">
+  <title id="t">What got merged</title>
+  <desc id="d">{total} merged upstream pull requests, {medium} of them 100 or more changed lines. By area:
+    {escape('; '.join(f'{a} {len(b)} ({wh})' for a, wh, b in LEDGER))}. {regress} were release regressions found by bisecting.</desc>
+  <defs>{GRAIN.format(g=p['grain'])}</defs>
+  <style>
+    .kicker {{ font: 500 12px {MONO}; fill: {p['muted']}; letter-spacing: 2.6px; }}
+    .motto {{ font: italic 400 16px {SERIF}; fill: {p['ink']}; }}
+    .legend {{ font: 400 11px {MONO}; fill: {p['muted']}; }}
+    .area {{ font: 600 13px {MONO}; fill: {p['ink']}; }}
+    .cnt {{ font: 600 13px {MONO}; fill: {p['ink']}; }}
+    .where {{ font: 400 11.5px {MONO}; fill: {p['muted']}; }}
+    .blk.m {{ fill: {p['seal']}; }}
+    .blk.s {{ fill: {p['ink']}; opacity: .78; }}
+    .reg {{ fill: {p['seal']}; }}
+    .pop {{ transform-box: fill-box; transform-origin: center; animation: pop .35s cubic-bezier(.3,1.5,.5,1) both; }}
+    @keyframes pop {{ from {{ opacity: 0; transform: scale(.4); }} to {{ opacity: 1; transform: none; }} }}
+    {REDUCE}
+  </style>
+  {frame(p, w, h)}
+  <text x="44" y="46" class="kicker">WHAT GOT MERGED</text>
+  <text x="836" y="46" class="motto" text-anchor="end">{total} upstream PRs · {medium} medium · {total - medium} small</text>
+  <rect x="44" y="64" width="12" height="9" rx="2" class="blk m"/><text x="62" y="72" class="legend">100+ lines</text>
+  <rect x="152" y="64" width="12" height="9" rx="2" class="blk s"/><text x="170" y="72" class="legend">smaller</text>
+  <path d="M250 64l4 4-4 4-4-4z" class="reg"/><text x="262" y="72" class="legend">release regression, bisected</text>
+  {''.join(rows)}
+</svg>
+"""
+
+
 if __name__ == "__main__":
     here = Path(__file__).parent
     for old in here.glob("stats-*.svg"):
         old.unlink()
     for mode, pal in PALETTES.items():
-        for name, svg in ((f"card-{mode}.svg", card(pal)), (f"flow-{mode}.svg", workflow(pal))):
+        for name, svg in ((f"card-{mode}.svg", card(pal)), (f"flow-{mode}.svg", workflow(pal)),
+                          (f"merged-{mode}.svg", ledger(pal))):
             with open(here / name, "w", encoding="utf-8", newline="\n") as f:
                 f.write(svg)
     print("built", sorted(p.name for p in here.glob("*.svg")))

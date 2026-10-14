@@ -8,13 +8,9 @@
   <img alt="How I work: agents sweep and reproduce, a second model reviews, I decide and ship. 25 merged upstream PRs, 19 in vLLM AIBrix." src="assets/flow-light.svg" width="100%">
 </picture>
 
-**Recent fixes**
-
-- [AIBrix #3054](https://github.com/vllm-project/aibrix/pull/3054): v0.7.0 batch jobs survive the v0.8.0 upgrade
-- [AIBrix #3080](https://github.com/vllm-project/aibrix/pull/3080): gateway tracing off by default again
-- [GPUStack #6394](https://github.com/gpustack/gpustack/pull/6394): MindIE honours `NPU_MEMORY_FRACTION`
-- [SQLFluff #8710](https://github.com/sqlfluff/sqlfluff/pull/8710): ST09 keeps the null-safe `<=>`
-- [REA #2333](https://github.com/morluto/rea/pull/2333): `--filter-output` keeps a selected JSON `null`
-
-**Projects**: [ib_strategy_project](https://github.com/Jackmeson1/ib_strategy_project) ·
-[ocrdlp-lab](https://github.com/Jackmeson1/ocrdlp-lab)
+<a href="https://github.com/search?q=author%3AJackmeson1+is%3Apr+is%3Amerged+org%3Avllm-project+org%3Agpustack+org%3Asqlfluff+org%3Amorluto&type=pullrequests&s=created&o=desc">
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/merged-dark.svg">
+  <img alt="What got merged: 25 upstream PRs, 12 medium and 13 small, by area: storage and downloads 7, gateway and routing 4, orchestration 4, autoscaling 3, deployment config 3, batch API 2, dev tooling 2; 2 release regressions found by bisecting" src="assets/merged-light.svg" width="100%">
+</picture>
+</a>
