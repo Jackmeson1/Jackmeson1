@@ -6,9 +6,9 @@ prefers-reduced-motion both show the finished card.
 from pathlib import Path
 
 FACTS = {
-    "merged": 25,  # merged upstream PRs (excluding own repos and the competition)
-    "solved": 173,  # conjectures settled on The Last Math Competition (leaderboard 2026-10-11)
-    "rank": 2,
+    "merged": 25,  # merged PRs in other people's repositories
+    "projects": 5,  # AIBrix, GPUStack, SQLFluff, Semantic Router, REA
+    "median_hours": 6,  # median time from opening a PR to its merge
     "as_of": "Oct 2026",
 }
 
@@ -35,7 +35,7 @@ def card(p):
         ("reproduce", "a failing test before any fix"),
         ("fix", "small, reviewable, in the house style"),
         ("review", "an independent check before it ships"),
-        ("prove", "when it is math: Lean 4, no sorry"),
+        ("follow up", "every review note answered"),
     ]
     rows = []
     for i, (verb, note) in enumerate(lines):
@@ -52,8 +52,8 @@ def card(p):
     return f"""<svg xmlns="http://www.w3.org/2000/svg" width="880" height="330" viewBox="0 0 880 330" role="img"
   aria-labelledby="t d">
   <title id="t">Jack</title>
-  <desc id="d">QA engineer and upstream fixer: reproduce with a failing test, fix small, review independently, prove in
-    Lean 4.</desc>
+  <desc id="d">QA engineer and open-source contributor: reproduce with a failing test, fix small, review
+    independently, answer every review note.</desc>
   <defs>{GRAIN.format(g=p['grain'])}
     <filter id="ink" x="-10%" y="-10%" width="120%" height="120%">
       <feTurbulence type="fractalNoise" baseFrequency=".75" numOctaves="2" seed="7"/>
@@ -73,8 +73,8 @@ def card(p):
     .cursor {{ fill: {p['seal']}; animation: blink 1.05s steps(1, end) 3.7s infinite backwards; }}
     .seal {{ transform-box: fill-box; transform-origin: center; animation: stamp .42s cubic-bezier(.3,1.6,.5,1) 4.15s both; }}
     .seal text {{ fill: {p['seal']}; }}
-    .seal .big {{ font: 700 25px {SERIF}; letter-spacing: 3px; }}
-    .seal .small {{ font: 700 8.5px {MONO}; letter-spacing: 1.4px; }}
+    .seal .big {{ font: 700 17px {SERIF}; letter-spacing: 1.5px; }}
+    .seal .small {{ font: 700 7.6px {MONO}; letter-spacing: .6px; }}
     @keyframes draw {{ from {{ stroke-dashoffset: 792; }} to {{ stroke-dashoffset: 0; }} }}
     @keyframes fade {{ from {{ opacity: 0; transform: translateY(6px); }} to {{ opacity: 1; transform: none; }} }}
     @keyframes type {{ from {{ clip-path: inset(0 100% 0 0); }} to {{ clip-path: inset(0 0 0 0); }} }}
@@ -87,7 +87,7 @@ def card(p):
   <rect x=".5" y=".5" width="879" height="329" rx="16" fill="{p['paper']}" filter="url(#grain)"/>
   <g class="fade">
     <text x="40" y="94" class="name">Jack<tspan class="dot">.</tspan></text>
-    <text x="44" y="128" class="role">QA ENGINEER  ·  UPSTREAM FIXER  ·  LEAN 4</text>
+    <text x="44" y="128" class="role">QA ENGINEER  ·  OPEN-SOURCE CONTRIBUTOR</text>
   </g>
   <line x1="44" y1="152" x2="836" y2="152" class="rule"/>
   {''.join(rows)}
@@ -95,8 +95,8 @@ def card(p):
   <g class="seal" style="opacity:.92" transform="rotate(-8 788 92)" filter="url(#ink)">
     <rect x="740" y="44" width="96" height="96" rx="6" fill="none" stroke="{p['seal']}" stroke-width="3"/>
     <rect x="747" y="51" width="82" height="82" rx="3" fill="none" stroke="{p['seal']}" stroke-width="1"/>
-    <text x="788" y="98" text-anchor="middle" class="big">PASS</text>
-    <text x="788" y="117" text-anchor="middle" class="small">VERIFIED · {FACTS['as_of'].split()[-1]}</text>
+    <text x="788" y="98" text-anchor="middle" class="big">MERGED</text>
+    <text x="788" y="117" text-anchor="middle" class="small">UPSTREAM · {FACTS['as_of'].split()[-1]}</text>
   </g>
 </svg>
 """
@@ -122,20 +122,18 @@ def roller(x, y, value, cls, delay):
 
 def stats(p):
     cols = [
-        (44, FACTS["merged"], "merged upstream PRs", "AIBrix · GPUStack · SQLFluff · …"),
-        (330, FACTS["solved"], "conjectures settled", "Lean 4 · audited · no sorry"),
-        (616, FACTS["rank"], "Last Math Competition", f"leaderboard rank · {FACTS['as_of']}"),
+        (44, FACTS["merged"], "", "merged upstream PRs", "in other people's repositories"),
+        (330, FACTS["projects"], "", "projects", "AIBrix · GPUStack · SQLFluff · REA"),
+        (616, FACTS["median_hours"], "h", "median time to merge", f"from PR opened to merged · {FACTS['as_of']}"),
     ]
     body = []
-    for j, (x, value, label, sub) in enumerate(cols):
+    for j, (x, value, suffix, label, sub) in enumerate(cols):
         d = 0.3 + j * 0.35
-        lead = ""
-        nx = x
-        if j == 2:
-            lead = f'<text x="{x}" y="78" class="num hash">#</text>'
-            nx = x + 34
+        tail = ""
+        if suffix:
+            tail = f'<text x="{x + 34 * len(str(value)) + 4}" y="78" class="num unit">{suffix}</text>'
         body.append(
-            f'{lead}{roller(nx, 78, value, "num", d)}'
+            f'{roller(x, 78, value, "num", d)}{tail}'
             f'<g class="fade" style="animation-delay:{d + .5:.2f}s">'
             f'<text x="{x}" y="112" class="label">{label}</text>'
             f'<text x="{x}" y="132" class="sub">{sub}</text></g>'
@@ -145,12 +143,12 @@ def stats(p):
     return f"""<svg xmlns="http://www.w3.org/2000/svg" width="880" height="160" viewBox="0 0 880 160" role="img"
   aria-labelledby="t d">
   <title id="t">Track record</title>
-  <desc id="d">{FACTS['merged']} merged upstream pull requests; {FACTS['solved']} conjectures settled in Lean 4;
-    rank {FACTS['rank']} on The Last Math Competition leaderboard ({FACTS['as_of']}).</desc>
+  <desc id="d">{FACTS['merged']} merged upstream pull requests across {FACTS['projects']} projects; median time to merge
+    {FACTS['median_hours']} hours ({FACTS['as_of']}).</desc>
   <defs>{GRAIN.format(g=p['grain'])}</defs>
   <style>
     .num {{ font: 600 54px {MONO}; fill: {p['ink']}; }}
-    .hash {{ fill: {p['seal']}; }}
+    .unit {{ fill: {p['seal']}; font-size: 40px; }}
     .label {{ font: 600 13px {MONO}; fill: {p['ink']}; letter-spacing: .4px; }}
     .sub {{ font: 400 11.5px {MONO}; fill: {p['muted']}; }}
     .vrule {{ stroke: {p['rule']}; stroke-dasharray: 98; animation: draw .8s ease-out both; }}
