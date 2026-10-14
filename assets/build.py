@@ -39,28 +39,25 @@ def frame(p, w, h):
 def card(p):
     """Identity and attitude."""
     lines = [
-        ("evidence", "a failing test, or it isn't a bug"),
-        ("restraint", "small PRs in the house style, no noise"),
-        ("follow-through", "every review note answered"),
+        "Agentic coding is here.",
+        "Open source iterates faster than ever.",
+        "I'm in — finding, fixing, getting it merged.",
     ]
     rows = []
-    for i, (verb, note) in enumerate(lines):
-        y = 196 + i * 30
+    for i, line in enumerate(lines):
+        y = 200 + i * 34
         rows.append(
-            f'<g class="type" style="animation-delay:{0.9 + i * 0.75:.2f}s">'
-            f'<text x="44" y="{y}" class="mark">✓</text>'
-            f'<text x="70" y="{y}" class="verb">{verb}</text>'
-            f'<text x="214" y="{y}" class="note">{note}</text></g>'
+            f'<g class="type" style="animation-delay:{0.9 + i * 0.8:.2f}s">'
+            f'<text x="44" y="{y}" class="num">0{i + 1}</text>'
+            f'<text x="80" y="{y}" class="line{" me" if i == len(lines) - 1 else ""}">{escape(line)}</text></g>'
         )
-    cy = 196 + (len(lines) - 1) * 30
-    cx = 214 + round(len(lines[-1][1]) * 8.45) + 8
-    end = 0.9 + (len(lines) - 1) * 0.75 + 0.6
-    w, h = 880, 280
+    end = 0.9 + (len(lines) - 1) * 0.8 + 0.6
+    w, h = 880, 300
     return f"""<svg xmlns="http://www.w3.org/2000/svg" width="{w}" height="{h}" viewBox="0 0 {w} {h}" role="img"
   aria-labelledby="t d">
   <title id="t">Jack</title>
-  <desc id="d">QA engineer and open-source contributor. Evidence: a failing test, or it isn't a bug. Restraint: small
-    PRs in the house style. Follow-through: every review note answered.</desc>
+  <desc id="d">QA engineer and open-source contributor. Agentic coding is here. Open source iterates faster than ever.
+    I'm in: finding, fixing, getting it merged.</desc>
   <defs>{GRAIN.format(g=p['grain'])}
     <filter id="ink" x="-10%" y="-10%" width="120%" height="120%">
       <feTurbulence type="fractalNoise" baseFrequency=".75" numOctaves="2" seed="7"/>
@@ -71,13 +68,12 @@ def card(p):
     .name {{ font: 400 54px {SERIF}; fill: {p['ink']}; letter-spacing: -.5px; }}
     .dot {{ fill: {p['seal']}; }}
     .role {{ font: 500 12px {MONO}; fill: {p['muted']}; letter-spacing: 2.6px; }}
-    .mark {{ font: 600 14px {MONO}; fill: {p['seal']}; }}
-    .verb {{ font: 600 14px {MONO}; fill: {p['ink']}; }}
-    .note {{ font: 400 14px {MONO}; fill: {p['muted']}; }}
+    .num {{ font: 600 12px {MONO}; fill: {p['seal']}; letter-spacing: 1px; }}
+    .line {{ font: 400 20px {SERIF}; fill: {p['muted']}; }}
+    .line.me {{ fill: {p['ink']}; }}
     .rule {{ stroke: {p['rule']}; stroke-width: 1; stroke-dasharray: 792; animation: draw 1.1s cubic-bezier(.6,0,.2,1) .2s both; }}
     .fade {{ animation: fade .9s ease-out .1s both; }}
-    .type {{ animation: type .55s steps(26, end) both; }}
-    .cursor {{ fill: {p['seal']}; animation: blink 1.05s steps(1, end) {end:.2f}s infinite backwards; }}
+    .type {{ animation: type .7s steps(30, end) both; }}
     .seal {{ transform-box: fill-box; transform-origin: center; animation: stamp .42s cubic-bezier(.3,1.6,.5,1) {end + .3:.2f}s both; }}
     .seal text {{ fill: {p['seal']}; }}
     .seal .big {{ font: 700 17px {SERIF}; letter-spacing: 1.5px; }}
@@ -85,7 +81,6 @@ def card(p):
     @keyframes draw {{ from {{ stroke-dashoffset: 792; }} to {{ stroke-dashoffset: 0; }} }}
     @keyframes fade {{ from {{ opacity: 0; transform: translateY(6px); }} to {{ opacity: 1; transform: none; }} }}
     @keyframes type {{ from {{ clip-path: inset(0 100% 0 0); }} to {{ clip-path: inset(0 0 0 0); }} }}
-    @keyframes blink {{ 0% {{ opacity: 0; }} 50% {{ opacity: 1; }} }}
     @keyframes stamp {{ 0% {{ opacity: 0; transform: rotate(-8deg) scale(1.7); }} 70% {{ opacity: .95; }}
       100% {{ opacity: .92; transform: rotate(-8deg) scale(1); }} }}
     {REDUCE}
@@ -97,7 +92,6 @@ def card(p):
   </g>
   <line x1="44" y1="152" x2="836" y2="152" class="rule"/>
   {''.join(rows)}
-  <rect x="{cx}" y="{cy - 13}" width="8" height="16" class="cursor"/>
   <g class="seal" style="opacity:.92" transform="rotate(-8 788 92)" filter="url(#ink)">
     <rect x="740" y="44" width="96" height="96" rx="6" fill="none" stroke="{p['seal']}" stroke-width="3"/>
     <rect x="747" y="51" width="82" height="82" rx="3" fill="none" stroke="{p['seal']}" stroke-width="1"/>
