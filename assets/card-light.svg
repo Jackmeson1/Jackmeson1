@@ -1,8 +1,8 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="880" height="330" viewBox="0 0 880 330" role="img"
+<svg xmlns="http://www.w3.org/2000/svg" width="880" height="280" viewBox="0 0 880 280" role="img"
   aria-labelledby="t d">
   <title id="t">Jack</title>
-  <desc id="d">QA engineer and open-source contributor: reproduce with a failing test, fix small, review
-    independently, answer every review note.</desc>
+  <desc id="d">QA engineer and open-source contributor. Evidence: a failing test, or it isn't a bug. Restraint: small
+    PRs in the house style. Follow-through: every review note answered.</desc>
   <defs>
   <filter id="grain" x="0" y="0" width="100%" height="100%">
     <feTurbulence type="fractalNoise" baseFrequency=".9" numOctaves="2" stitchTiles="stitch"/>
@@ -24,8 +24,8 @@
     .rule { stroke: #dcd3c4; stroke-width: 1; stroke-dasharray: 792; animation: draw 1.1s cubic-bezier(.6,0,.2,1) .2s both; }
     .fade { animation: fade .9s ease-out .1s both; }
     .type { animation: type .55s steps(26, end) both; }
-    .cursor { fill: #c2412d; animation: blink 1.05s steps(1, end) 3.7s infinite backwards; }
-    .seal { transform-box: fill-box; transform-origin: center; animation: stamp .42s cubic-bezier(.3,1.6,.5,1) 4.15s both; }
+    .cursor { fill: #c2412d; animation: blink 1.05s steps(1, end) 3.00s infinite backwards; }
+    .seal { transform-box: fill-box; transform-origin: center; animation: stamp .42s cubic-bezier(.3,1.6,.5,1) 3.30s both; }
     .seal text { fill: #c2412d; }
     .seal .big { font: 700 17px 'Iowan Old Style','Palatino Linotype',Palatino,Georgia,'Times New Roman',serif; letter-spacing: 1.5px; }
     .seal .small { font: 700 7.6px ui-monospace,'SF Mono',SFMono-Regular,Menlo,Consolas,'Liberation Mono',monospace; letter-spacing: .6px; }
@@ -37,15 +37,14 @@
       100% { opacity: .92; transform: rotate(-8deg) scale(1); } }
     @media (prefers-reduced-motion: reduce) { * { animation: none !important; } }
   </style>
-  <rect x=".5" y=".5" width="879" height="329" rx="16" fill="#f4efe6" stroke="#dcd3c4"/>
-  <rect x=".5" y=".5" width="879" height="329" rx="16" fill="#f4efe6" filter="url(#grain)"/>
+  <rect x=".5" y=".5" width="879" height="279" rx="16" fill="#f4efe6" stroke="#dcd3c4"/><rect x=".5" y=".5" width="879" height="279" rx="16" fill="#f4efe6" filter="url(#grain)"/>
   <g class="fade">
     <text x="40" y="94" class="name">Jack<tspan class="dot">.</tspan></text>
     <text x="44" y="128" class="role">QA ENGINEER  ·  OPEN-SOURCE CONTRIBUTOR</text>
   </g>
   <line x1="44" y1="152" x2="836" y2="152" class="rule"/>
-  <g class="type" style="animation-delay:0.90s"><text x="44" y="196" class="mark">✓</text><text x="70" y="196" class="verb">reproduce</text><text x="186" y="196" class="note">a failing test before any fix</text></g><g class="type" style="animation-delay:1.65s"><text x="44" y="226" class="mark">✓</text><text x="70" y="226" class="verb">fix</text><text x="186" y="226" class="note">small, reviewable, in the house style</text></g><g class="type" style="animation-delay:2.40s"><text x="44" y="256" class="mark">✓</text><text x="70" y="256" class="verb">review</text><text x="186" y="256" class="note">an independent check before it ships</text></g><g class="type" style="animation-delay:3.15s"><text x="44" y="286" class="mark">✓</text><text x="70" y="286" class="verb">follow up</text><text x="186" y="286" class="note">every review note answered</text></g>
-  <rect x="414" y="273" width="8" height="16" class="cursor"/>
+  <g class="type" style="animation-delay:0.90s"><text x="44" y="196" class="mark">✓</text><text x="70" y="196" class="verb">evidence</text><text x="214" y="196" class="note">a failing test, or it isn't a bug</text></g><g class="type" style="animation-delay:1.65s"><text x="44" y="226" class="mark">✓</text><text x="70" y="226" class="verb">restraint</text><text x="214" y="226" class="note">small PRs in the house style, no noise</text></g><g class="type" style="animation-delay:2.40s"><text x="44" y="256" class="mark">✓</text><text x="70" y="256" class="verb">follow-through</text><text x="214" y="256" class="note">every review note answered</text></g>
+  <rect x="442" y="243" width="8" height="16" class="cursor"/>
   <g class="seal" style="opacity:.92" transform="rotate(-8 788 92)" filter="url(#ink)">
     <rect x="740" y="44" width="96" height="96" rx="6" fill="none" stroke="#c2412d" stroke-width="3"/>
     <rect x="747" y="51" width="82" height="82" rx="3" fill="none" stroke="#c2412d" stroke-width="1"/>

@@ -1,11 +1,11 @@
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/card-dark.svg">
-  <img alt="Jack. QA engineer, open-source contributor" src="assets/card-light.svg" width="100%">
+  <img alt="Jack. QA engineer, open-source contributor: evidence, restraint, follow-through" src="assets/card-light.svg" width="100%">
 </picture>
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/stats-dark.svg">
-  <img alt="25 merged upstream PRs · 5 projects · median time to merge 6 hours" src="assets/stats-light.svg" width="100%">
+  <source media="(prefers-color-scheme: dark)" srcset="assets/flow-dark.svg">
+  <img alt="How I work: agents sweep and reproduce, a second model reviews, I decide and ship. 25 merged upstream PRs, 19 in vLLM AIBrix." src="assets/flow-light.svg" width="100%">
 </picture>
 
 **Recent fixes**
