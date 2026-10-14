@@ -56,7 +56,7 @@ def card(p):
     return f"""<svg xmlns="http://www.w3.org/2000/svg" width="{w}" height="{h}" viewBox="0 0 {w} {h}" role="img"
   aria-labelledby="t d">
   <title id="t">Jack</title>
-  <desc id="d">QA engineer and open-source contributor. Agentic coding is here. Open source iterates faster than ever.
+  <desc id="d">SDET working on agentic workflows and open source. Agentic coding is here. Open source iterates faster than ever.
     I'm in: finding, fixing, getting it merged.</desc>
   <defs>{GRAIN.format(g=p['grain'])}
     <filter id="ink" x="-10%" y="-10%" width="120%" height="120%">
@@ -88,7 +88,7 @@ def card(p):
   {frame(p, w, h)}
   <g class="fade">
     <text x="40" y="94" class="name">Jack<tspan class="dot">.</tspan></text>
-    <text x="44" y="128" class="role">QA ENGINEER  ·  OPEN-SOURCE CONTRIBUTOR</text>
+    <text x="44" y="128" class="role">SDET  ·  AGENTIC WORKFLOWS  ·  OPEN SOURCE</text>
   </g>
   <line x1="44" y1="152" x2="836" y2="152" class="rule"/>
   {''.join(rows)}

@@ -1,6 +1,6 @@
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/card-dark.svg">
-  <img alt="Jack. QA engineer, open-source contributor: evidence, restraint, follow-through" src="assets/card-light.svg" width="100%">
+  <img alt="Jack. SDET, agentic workflows, open source. Agentic coding is here. Open source iterates faster than ever. I'm in: finding, fixing, getting it merged." src="assets/card-light.svg" width="100%">
 </picture>
 
 <picture>
