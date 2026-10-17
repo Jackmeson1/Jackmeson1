@@ -7,9 +7,10 @@ from html import escape
 from pathlib import Path
 
 FACTS = {
-    "merged": 25,  # merged PRs in other people's repositories
-    "projects": 5,  # AIBrix, GPUStack, SQLFluff, Semantic Router, REA
-    "aibrix": 19,  # merged in vllm-project/aibrix
+    "merged": 43,  # merged PRs in other people's repositories
+    "projects": 8,  # AIBrix, Xinference, GPUStack, Semantic Router, guidellm, SQLFluff, REA, QuantLib
+    "aibrix": 21,  # merged in vllm-project/aibrix
+    "xinference": 14,  # merged in xorbitsai/inference
     "as_of": "Oct 2026",
 }
 
@@ -149,7 +150,7 @@ def workflow(p):
   <title id="t">How I work</title>
   <desc id="d">Agents sweep releases and upstream changes and reproduce bugs with a failing test; a second model
     reviews independently; I decide by impact and ship small PRs with follow-up. Result: {FACTS['merged']} merged
-    upstream pull requests, {FACTS['aibrix']} of them in vLLM AIBrix, iterating with maintainers
+    upstream pull requests, {FACTS['aibrix']} of them in vLLM AIBrix and {FACTS['xinference']} in Xinference, iterating with maintainers
     ({FACTS['as_of']}).</desc>
   <defs>{GRAIN.format(g=p['grain'])}</defs>
   <style>
@@ -186,7 +187,7 @@ def workflow(p):
   {roller(rx, 104, FACTS['merged'], 'num', 1.9)}
   <g class="pop" style="animation-delay:2.4s">
     <text x="{rx}" y="134" class="label">merged upstream</text>
-    <text x="{rx}" y="154" class="sub">{FACTS['aibrix']} in vLLM AIBrix</text>
+    <text x="{rx}" y="154" class="sub">{FACTS['aibrix']} AIBrix · {FACTS['xinference']} Xinference</text>
     <text x="{rx}" y="171" class="sub">iterating with maintainers</text>
   </g>
 </svg>
@@ -196,13 +197,15 @@ def workflow(p):
 # Merged upstream PRs by area. Size: "M" = 100+ changed lines, "S" = under 100. "R" marks a release regression
 # found by bisecting a release pair. Update when PRs merge (sizes from `gh pr view N --json additions,deletions`).
 LEDGER = [
-    ("storage & downloads", "AIBrix", ["M", "S", "M", "S", "S", "S", "M"]),
-    ("gateway & routing", "AIBrix · Semantic Router", ["M", "M", "M", "M"]),
-    ("orchestration", "AIBrix", ["S", "S", "M", "M"]),
+    ("storage & downloads", "AIBrix", ["M", "S", "M", "S", "S", "M", "S"]),
+    ("inference engines", "Xinference", ["S", "M", "M", "M", "M", "M"]),
+    ("orchestration", "AIBrix · Xinference", ["S", "S", "M", "M", "M", "M"]),
+    ("gateway & routing", "AIBrix · Semantic Router · Xinference", ["M", "M", "M", "M", "S"]),
+    ("streaming & requests", "Xinference", ["M", "M", "M", "M", "M"]),
+    ("deployment config", "GPUStack · AIBrix · Xinference", ["S", "S", "SR", "S"]),
+    ("tooling & libraries", "REA · SQLFluff · guidellm · QuantLib", ["S", "S", "S", "S"]),
     ("autoscaling", "AIBrix", ["S", "M", "S"]),
-    ("deployment config", "GPUStack · AIBrix", ["S", "S", "SR"]),
-    ("batch API", "AIBrix", ["MR", "M"]),
-    ("dev tooling", "SQLFluff · REA", ["S", "S"]),
+    ("batch API", "AIBrix", ["MR", "M", "M"]),
 ]
 
 
