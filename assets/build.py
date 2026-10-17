@@ -231,14 +231,16 @@ def ledger(p):
         rows.append(
             f'<text x="{x_lab}" y="{y}" class="area">{escape(area)}</text>{"".join(cells)}'
             f'<text x="{end + 4}" y="{y}" class="cnt">{len(blocks)}</text>'
-            f'<text x="836" y="{y}" class="where" text-anchor="end">{where}</text>'
         )
-    w, h = 880, y0 + (len(LEDGER) - 1) * step + 44
+    y_foot = y0 + (len(LEDGER) - 1) * step + 40
+    others = FACTS["projects"] - 2
+    w, h = 880, y_foot + 28
     return f"""<svg xmlns="http://www.w3.org/2000/svg" width="{w}" height="{h}" viewBox="0 0 {w} {h}" role="img"
   aria-labelledby="t d">
   <title id="t">What got merged</title>
   <desc id="d">{total} merged upstream pull requests, {medium} of them 100 or more changed lines. By area:
-    {escape('; '.join(f'{a} {len(b)} ({wh})' for a, wh, b in LEDGER))}. {regress} were release regressions found by bisecting.</desc>
+    {escape('; '.join(f'{a} {len(b)}' for a, wh, b in LEDGER))}. {regress} were release regressions found by bisecting.
+    Across {FACTS['projects']} projects: AIBrix, Xinference and {others} others.</desc>
   <defs>{GRAIN.format(g=p['grain'])}</defs>
   <style>
     .kicker {{ font: 500 12px {MONO}; fill: {p['muted']}; letter-spacing: 2.6px; }}
@@ -261,6 +263,8 @@ def ledger(p):
   <rect x="152" y="64" width="12" height="9" rx="2" class="blk s"/><text x="170" y="72" class="legend">smaller</text>
   <path d="M250 64l4 4-4 4-4-4z" class="reg"/><text x="262" y="72" class="legend">release regression, bisected</text>
   {''.join(rows)}
+  <line x1="44" y1="{y_foot - 18}" x2="836" y2="{y_foot - 18}" stroke="{p['rule']}"/>
+  <text x="44" y="{y_foot}" class="where">{FACTS['projects']} projects · AIBrix, Xinference and {others} others</text>
 </svg>
 """
 
