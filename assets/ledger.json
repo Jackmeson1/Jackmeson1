@@ -1,0 +1,634 @@
+{
+ "prs": [
+  {
+   "repo": "vllm-project/aibrix",
+   "number": 2961,
+   "merged": "2026-10-09",
+   "title": "[Bug] Fix runtime download status for nested and Hugging Face models",
+   "lines": 239,
+   "size": "M",
+   "area": "storage & downloads",
+   "regression": false
+  },
+  {
+   "repo": "vllm-project/aibrix",
+   "number": 2967,
+   "merged": "2026-10-10",
+   "title": "[Bug] Start a download for a model directory with no tracked files",
+   "lines": 40,
+   "size": "S",
+   "area": "storage & downloads",
+   "regression": false
+  },
+  {
+   "repo": "vllm-project/aibrix",
+   "number": 2968,
+   "merged": "2026-10-10",
+   "title": "[Bug] Treat an omitted role replicas as zero in RoleSet status",
+   "lines": 72,
+   "size": "S",
+   "area": "orchestration",
+   "regression": false
+  },
+  {
+   "repo": "vllm-project/aibrix",
+   "number": 2972,
+   "merged": "2026-10-10",
+   "title": "[Bug] Admit user RPM on the counter's incremented value",
+   "lines": 139,
+   "size": "M",
+   "area": "gateway & routing",
+   "regression": false
+  },
+  {
+   "repo": "vllm-project/aibrix",
+   "number": 2982,
+   "merged": "2026-10-10",
+   "title": "[Bug] Skip nested folder markers in S3 and GCS artifact downloads",
+   "lines": 115,
+   "size": "M",
+   "area": "storage & downloads",
+   "regression": false
+  },
+  {
+   "repo": "vllm-project/aibrix",
+   "number": 2984,
+   "merged": "2026-10-11",
+   "title": "[Bug] Validate RoleSet update budgets before running role syncers",
+   "lines": 96,
+   "size": "S",
+   "area": "orchestration",
+   "regression": false
+  },
+  {
+   "repo": "vllm-project/aibrix",
+   "number": 2986,
+   "merged": "2026-10-11",
+   "title": "[Bug] Disable the HPA scaling direction whose max rate is 1",
+   "lines": 51,
+   "size": "S",
+   "area": "autoscaling",
+   "regression": false
+  },
+  {
+   "repo": "vllm-project/aibrix",
+   "number": 2988,
+   "merged": "2026-10-11",
+   "title": "[Bug] Raise ModelNotFoundError when an S3/TOS model source has no objects",
+   "lines": 79,
+   "size": "S",
+   "area": "storage & downloads",
+   "regression": false
+  },
+  {
+   "repo": "vllm-project/semantic-router",
+   "number": 4808,
+   "merged": "2026-10-11",
+   "title": "[Bug] Apply each language rule's effective threshold",
+   "lines": 197,
+   "size": "M",
+   "area": "gateway & routing",
+   "regression": false
+  },
+  {
+   "repo": "gpustack/gpustack",
+   "number": 6394,
+   "merged": "2026-10-12",
+   "title": "fix(mindie): apply NPU_MEMORY_FRACTION when the flag is omitted",
+   "lines": 17,
+   "size": "S",
+   "area": "deployment config",
+   "regression": false
+  },
+  {
+   "repo": "gpustack/gpustack",
+   "number": 6408,
+   "merged": "2026-10-12",
+   "title": "fix(mindie): write token and e2e timeouts into the generated config",
+   "lines": 58,
+   "size": "S",
+   "area": "deployment config",
+   "regression": false
+  },
+  {
+   "repo": "vllm-project/aibrix",
+   "number": 3002,
+   "merged": "2026-10-12",
+   "title": "[Bug] Use external and domain totals in APA",
+   "lines": 132,
+   "size": "M",
+   "area": "autoscaling",
+   "regression": false
+  },
+  {
+   "repo": "vllm-project/aibrix",
+   "number": 3004,
+   "merged": "2026-10-12",
+   "title": "[Bug] Use supported keys in the APA samples",
+   "lines": 28,
+   "size": "S",
+   "area": "autoscaling",
+   "regression": false
+  },
+  {
+   "repo": "vllm-project/semantic-router",
+   "number": 4750,
+   "merged": "2026-10-12",
+   "title": "[Bug] Return PII and security results for batch task_type \"all\"",
+   "lines": 584,
+   "size": "M",
+   "area": "gateway & routing",
+   "regression": false
+  },
+  {
+   "repo": "morluto/rea",
+   "number": 2333,
+   "merged": "2026-10-13",
+   "title": "fix(cli)!: keep a selected JSON null in --filter-output output",
+   "lines": 37,
+   "size": "S",
+   "area": "tooling & libraries",
+   "regression": false
+  },
+  {
+   "repo": "vllm-project/aibrix",
+   "number": 3030,
+   "merged": "2026-10-13",
+   "title": "[Bug] Treat a TOS v1 prefix with children as a directory",
+   "lines": 84,
+   "size": "S",
+   "area": "storage & downloads",
+   "regression": false
+  },
+  {
+   "repo": "vllm-project/aibrix",
+   "number": 3033,
+   "merged": "2026-10-13",
+   "title": "[Bug] Persist RayClusterFleet pause/resume conditions via the status subresource",
+   "lines": 342,
+   "size": "M",
+   "area": "orchestration",
+   "regression": false
+  },
+  {
+   "repo": "vllm-project/aibrix",
+   "number": 3038,
+   "merged": "2026-10-13",
+   "title": "[Bug] Return Files metadata timestamps as aware UTC for S3, TOS and local storage",
+   "lines": 237,
+   "size": "M",
+   "area": "storage & downloads",
+   "regression": false
+  },
+  {
+   "repo": "vllm-project/aibrix",
+   "number": 3040,
+   "merged": "2026-10-13",
+   "title": "[Bug] [API] Avoid retrying Redis inflight admission and track local fallbacks",
+   "lines": 434,
+   "size": "M",
+   "area": "gateway & routing",
+   "regression": false
+  },
+  {
+   "repo": "vllm-project/aibrix",
+   "number": 3052,
+   "merged": "2026-10-13",
+   "title": "[Bug] Keep a TOS v1 exact object with bare siblings a file",
+   "lines": 57,
+   "size": "S",
+   "area": "storage & downloads",
+   "regression": false
+  },
+  {
+   "repo": "vllm-project/aibrix",
+   "number": 3054,
+   "merged": "2026-10-13",
+   "title": "[Bug] Migrate v0.7.0 local batch-metastore jobs to the batchjob/ layout at startup",
+   "lines": 381,
+   "size": "M",
+   "area": "batch API",
+   "regression": true
+  },
+  {
+   "repo": "sqlfluff/sqlfluff",
+   "number": 8710,
+   "merged": "2026-10-14",
+   "title": "Keep the null-safe equals operator when ST09 swaps operands",
+   "lines": 36,
+   "size": "S",
+   "area": "tooling & libraries",
+   "regression": false
+  },
+  {
+   "repo": "vllm-project/aibrix",
+   "number": 3066,
+   "merged": "2026-10-14",
+   "title": "[Bug] Requeue RayClusterFleet reconciles for the progress deadline check",
+   "lines": 495,
+   "size": "M",
+   "area": "orchestration",
+   "regression": false
+  },
+  {
+   "repo": "vllm-project/aibrix",
+   "number": 3068,
+   "merged": "2026-10-14",
+   "title": "[Bug] Record a Batch cancellation accepted before the runtime session starts",
+   "lines": 173,
+   "size": "M",
+   "area": "batch API",
+   "regression": false
+  },
+  {
+   "repo": "vllm-project/aibrix",
+   "number": 3080,
+   "merged": "2026-10-14",
+   "title": "[Bug] Keep chart tracing off by default",
+   "lines": 10,
+   "size": "S",
+   "area": "deployment config",
+   "regression": true
+  },
+  {
+   "repo": "vllm-project/aibrix",
+   "number": 3076,
+   "merged": "2026-10-15",
+   "title": "[Bug] Accept a Batch cancellation while a live driver validates the input",
+   "lines": 153,
+   "size": "M",
+   "area": "batch API",
+   "regression": false
+  },
+  {
+   "repo": "xorbitsai/inference",
+   "number": 5684,
+   "merged": "2026-10-15",
+   "title": "fix(router): treat chat_template_kwargs.thinking as enable_thinking",
+   "lines": 96,
+   "size": "S",
+   "area": "streaming & requests",
+   "regression": false
+  },
+  {
+   "repo": "xorbitsai/inference",
+   "number": 5685,
+   "merged": "2026-10-15",
+   "title": "fix(supervisor): roll back earlier shards when a sharded launch fails",
+   "lines": 184,
+   "size": "M",
+   "area": "orchestration",
+   "regression": false
+  },
+  {
+   "repo": "xorbitsai/inference",
+   "number": 5687,
+   "merged": "2026-10-15",
+   "title": "fix(llm): keep text around DeepSeek V3.1, V3.2 and V4 tool calls without streaming",
+   "lines": 188,
+   "size": "M",
+   "area": "inference engines",
+   "regression": false
+  },
+  {
+   "repo": "lballabio/QuantLib",
+   "number": 2876,
+   "merged": "2026-10-16",
+   "title": "Fix start-window knock-in puts in the partial-time barrier engine",
+   "lines": 78,
+   "size": "S",
+   "area": "tooling & libraries",
+   "regression": false
+  },
+  {
+   "repo": "vllm-project/aibrix",
+   "number": 3110,
+   "merged": "2026-10-16",
+   "title": "[Feat] Ask a client of a waking ModelClaim to retry after 3 s",
+   "lines": 132,
+   "size": "M",
+   "area": "gateway & routing",
+   "regression": false
+  },
+  {
+   "repo": "vllm-project/guidellm",
+   "number": 1288,
+   "merged": "2026-10-16",
+   "title": "Pass rampup_duration to constant sweep steps",
+   "lines": 44,
+   "size": "S",
+   "area": "tooling & libraries",
+   "regression": false
+  },
+  {
+   "repo": "xorbitsai/inference",
+   "number": 5690,
+   "merged": "2026-10-16",
+   "title": "fix(core): record token metrics for non-streaming completions",
+   "lines": 164,
+   "size": "M",
+   "area": "streaming & requests",
+   "regression": false
+  },
+  {
+   "repo": "xorbitsai/inference",
+   "number": 5691,
+   "merged": "2026-10-16",
+   "title": "fix(vllm): keep the caller's stop and stop_token_ids for reasoning models",
+   "lines": 97,
+   "size": "S",
+   "area": "inference engines",
+   "regression": false
+  },
+  {
+   "repo": "xorbitsai/inference",
+   "number": 5692,
+   "merged": "2026-10-16",
+   "title": "fix(sglang): keep the final usage and finish reason when the last stream event adds no text",
+   "lines": 183,
+   "size": "M",
+   "area": "streaming & requests",
+   "regression": false
+  },
+  {
+   "repo": "xorbitsai/inference",
+   "number": 5694,
+   "merged": "2026-10-16",
+   "title": "fix(api): abort non-streaming vLLM requests when the client disconnects",
+   "lines": 497,
+   "size": "M",
+   "area": "streaming & requests",
+   "regression": false
+  },
+  {
+   "repo": "xorbitsai/inference",
+   "number": 5699,
+   "merged": "2026-10-16",
+   "title": "fix(transformers): build batching attention masks for left-padded inputs",
+   "lines": 102,
+   "size": "M",
+   "area": "inference engines",
+   "regression": false
+  },
+  {
+   "repo": "xorbitsai/inference",
+   "number": 5701,
+   "merged": "2026-10-16",
+   "title": "fix(transformers): keep a batch running when one request is aborted",
+   "lines": 389,
+   "size": "M",
+   "area": "inference engines",
+   "regression": false
+  },
+  {
+   "repo": "xorbitsai/inference",
+   "number": 5708,
+   "merged": "2026-10-16",
+   "title": "fix(transformers): use greedy decoding for Qwen2-VL at temperature 0",
+   "lines": 191,
+   "size": "M",
+   "area": "multimodal models",
+   "regression": false
+  },
+  {
+   "repo": "xorbitsai/inference",
+   "number": 5709,
+   "merged": "2026-10-16",
+   "title": "fix(audio): stop capping Whisper transcriptions at 128 new tokens",
+   "lines": 108,
+   "size": "M",
+   "area": "multimodal models",
+   "regression": false
+  },
+  {
+   "repo": "xorbitsai/inference",
+   "number": 5714,
+   "merged": "2026-10-16",
+   "title": "fix(transformers): honour max_tokens for Qwen Omni and skip audio when streaming",
+   "lines": 111,
+   "size": "M",
+   "area": "multimodal models",
+   "regression": false
+  },
+  {
+   "repo": "xorbitsai/inference",
+   "number": 5715,
+   "merged": "2026-10-17",
+   "title": "fix(virtualenv): keep the parent huggingface-hub for diffusers models",
+   "lines": 65,
+   "size": "S",
+   "area": "deployment config",
+   "regression": false
+  },
+  {
+   "repo": "xorbitsai/inference",
+   "number": 5716,
+   "merged": "2026-10-17",
+   "title": "fix(transformers): honour request thinking settings in direct-chat reasoning output",
+   "lines": 194,
+   "size": "M",
+   "area": "streaming & requests",
+   "regression": false
+  },
+  {
+   "repo": "sqlfluff/sqlfluff",
+   "number": 8745,
+   "merged": "2026-10-18",
+   "title": "Keep subquery and row-constructor parentheses in ST08 fixes",
+   "lines": 36,
+   "size": "S",
+   "area": "tooling & libraries",
+   "regression": false
+  },
+  {
+   "repo": "sqlfluff/sqlfluff",
+   "number": 8779,
+   "merged": "2026-10-18",
+   "title": "Load the --stdin-filename config in render",
+   "lines": 33,
+   "size": "S",
+   "area": "tooling & libraries",
+   "regression": false
+  },
+  {
+   "repo": "vllm-project/aibrix",
+   "number": 3111,
+   "merged": "2026-10-18",
+   "title": "[Bug] Cap a ModelClaim's KV limit at its engine's startup KV capacity",
+   "lines": 1468,
+   "size": "M",
+   "area": "orchestration",
+   "regression": false
+  },
+  {
+   "repo": "xorbitsai/inference",
+   "number": 5729,
+   "merged": "2026-10-18",
+   "title": "fix(transformers): enforce the launch context_length on multimodal direct chat",
+   "lines": 281,
+   "size": "M",
+   "area": "multimodal models",
+   "regression": false
+  },
+  {
+   "repo": "xorbitsai/inference",
+   "number": 5732,
+   "merged": "2026-10-18",
+   "title": "fix(model): use diffusers 0.35.2 for the specs pinned to 0.35.1",
+   "lines": 117,
+   "size": "M",
+   "area": "deployment config",
+   "regression": false
+  },
+  {
+   "repo": "xorbitsai/inference",
+   "number": 5734,
+   "merged": "2026-10-18",
+   "title": "fix(transformers): enforce the launch context_length on Gemma 3 and MiniCPM-V 4.6",
+   "lines": 41,
+   "size": "S",
+   "area": "multimodal models",
+   "regression": false
+  },
+  {
+   "repo": "xorbitsai/inference",
+   "number": 5735,
+   "merged": "2026-10-18",
+   "title": "fix(transformers): enforce the launch context_length on Ovis 2 and DeepSeek-VL2",
+   "lines": 71,
+   "size": "S",
+   "area": "multimodal models",
+   "regression": false
+  },
+  {
+   "repo": "xorbitsai/inference",
+   "number": 5738,
+   "merged": "2026-10-18",
+   "title": "fix(transformers): enforce the launch context_length on Qwen Omni",
+   "lines": 183,
+   "size": "M",
+   "area": "multimodal models",
+   "regression": false
+  },
+  {
+   "repo": "gpustack/gpustack",
+   "number": 6425,
+   "merged": "2026-10-19",
+   "title": "fix(sglang): omit removed n-gram flags and warn on ignored bounds",
+   "lines": 106,
+   "size": "M",
+   "area": "deployment config",
+   "regression": false
+  },
+  {
+   "repo": "lballabio/QuantLib",
+   "number": 2877,
+   "merged": "2026-10-19",
+   "title": "Price YoY optionlets fixing within one lag of the vol base date with volatility",
+   "lines": 91,
+   "size": "S",
+   "area": "tooling & libraries",
+   "regression": false
+  },
+  {
+   "repo": "lballabio/QuantLib",
+   "number": 2878,
+   "merged": "2026-10-19",
+   "title": "Keep the terminal exercise in tree engines when the grid rounds below maturity",
+   "lines": 244,
+   "size": "M",
+   "area": "tooling & libraries",
+   "regression": false
+  },
+  {
+   "repo": "vllm-project/aibrix",
+   "number": 3057,
+   "merged": "2026-10-19",
+   "title": "[Bug] Use SGLang's priority=\"\" queue totals instead of a per-priority series",
+   "lines": 178,
+   "size": "M",
+   "area": "autoscaling",
+   "regression": false
+  },
+  {
+   "repo": "vllm-project/aibrix",
+   "number": 3170,
+   "merged": "2026-10-19",
+   "title": "[Bug] Keep a saved startup KV ceiling across a transient identity-read failure",
+   "lines": 399,
+   "size": "M",
+   "area": "orchestration",
+   "regression": false
+  },
+  {
+   "repo": "vllm-project/aibrix",
+   "number": 3176,
+   "merged": "2026-10-19",
+   "title": "[Bug] Avoid success metrics for incomplete canceled requests",
+   "lines": 259,
+   "size": "M",
+   "area": "gateway & routing",
+   "regression": false
+  },
+  {
+   "repo": "xorbitsai/inference",
+   "number": 5740,
+   "merged": "2026-10-19",
+   "title": "fix(transformers): return text-only replies for Qwen3-Omni-Thinking non-streaming chat",
+   "lines": 78,
+   "size": "S",
+   "area": "multimodal models",
+   "regression": false
+  },
+  {
+   "repo": "xorbitsai/inference",
+   "number": 5743,
+   "merged": "2026-10-19",
+   "title": "fix(vllm): pass images to vLLM for audio + vision models such as Gemma 4",
+   "lines": 108,
+   "size": "M",
+   "area": "multimodal models",
+   "regression": false
+  },
+  {
+   "repo": "xorbitsai/inference",
+   "number": 5752,
+   "merged": "2026-10-19",
+   "title": "fix(transformers): pass the audio to the Qwen2-Audio processor",
+   "lines": 85,
+   "size": "S",
+   "area": "multimodal models",
+   "regression": false
+  },
+  {
+   "repo": "xorbitsai/inference",
+   "number": 5754,
+   "merged": "2026-10-19",
+   "title": "fix(transformers): enforce the launch context_length on Qwen2-Audio",
+   "lines": 125,
+   "size": "M",
+   "area": "multimodal models",
+   "regression": false
+  },
+  {
+   "repo": "vladmandic/sdnext",
+   "number": 5164,
+   "merged": "2026-10-20",
+   "title": "fix(offload): reset balanced-offload state when clearing model caches",
+   "lines": 4,
+   "size": "S",
+   "area": "image & video",
+   "regression": false
+  },
+  {
+   "repo": "xorbitsai/inference",
+   "number": 5758,
+   "merged": "2026-10-20",
+   "title": "fix(vllm): support Xavier KV transfer configuration on vLLM 0.32",
+   "lines": 70,
+   "size": "S",
+   "area": "inference engines",
+   "regression": false
+  }
+ ]
+}

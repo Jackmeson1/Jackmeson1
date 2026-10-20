@@ -1,17 +1,39 @@
-"""Builds the profile SVGs (light and dark). Edit FACTS, then run: python assets/build.py
+"""Builds the profile SVGs (light and dark) and README.md from assets/ledger.json: python assets/build.py
+
+The ledger is refreshed by assets/update.py (daily in GitHub Actions). Edit an entry's "area" or "regression" in
+ledger.json by hand to reclassify it; update.py never overwrites existing entries.
 
 The SVGs animate with CSS only (no script), and their resting state is the final frame, so static renderers and
 prefers-reduced-motion both show the finished picture.
 """
+import json
+from collections import Counter
+from datetime import date
 from html import escape
 from pathlib import Path
+from urllib.parse import quote_plus
+
+HERE = Path(__file__).parent
+PRS = json.loads((HERE / "ledger.json").read_text(encoding="utf-8"))["prs"]  # merged PRs in other people's repositories
+NAMES = {  # display names; any other repository shows as its name
+    "vllm-project/aibrix": "AIBrix", "xorbitsai/inference": "Xinference", "gpustack/gpustack": "GPUStack",
+    "vllm-project/semantic-router": "Semantic Router", "vllm-project/guidellm": "guidellm",
+    "sqlfluff/sqlfluff": "SQLFluff", "morluto/rea": "REA", "lballabio/QuantLib": "QuantLib",
+    "vladmandic/sdnext": "SD.Next", "huggingface/diffusers": "diffusers", "python-pillow/Pillow": "Pillow",
+}
+REPO_COUNTS = Counter(p["repo"] for p in PRS)
+
+
+def name(repo):
+    return NAMES.get(repo, repo.split("/")[1])
+
 
 FACTS = {
-    "merged": 43,  # merged PRs in other people's repositories
-    "projects": 8,  # AIBrix, Xinference, GPUStack, Semantic Router, guidellm, SQLFluff, REA, QuantLib
-    "aibrix": 21,  # merged in vllm-project/aibrix
-    "xinference": 14,  # merged in xorbitsai/inference
-    "as_of": "Oct 2026",
+    "merged": len(PRS),
+    "projects": len(REPO_COUNTS),
+    "aibrix": REPO_COUNTS["vllm-project/aibrix"],
+    "xinference": REPO_COUNTS["xorbitsai/inference"],
+    "as_of": date.fromisoformat(max(p["merged"] for p in PRS)).strftime("%b %Y"),  # month of the latest merge
 }
 
 PALETTES = {
@@ -194,19 +216,18 @@ def workflow(p):
 """
 
 
-# Merged upstream PRs by area. Size: "M" = 100+ changed lines, "S" = under 100. "R" marks a release regression
-# found by bisecting a release pair. Update when PRs merge (sizes from `gh pr view N --json additions,deletions`).
-LEDGER = [
-    ("storage & downloads", "AIBrix", ["M", "S", "M", "S", "S", "M", "S"]),
-    ("inference engines", "Xinference", ["S", "M", "M", "M", "M", "M"]),
-    ("orchestration", "AIBrix · Xinference", ["S", "S", "M", "M", "M", "M"]),
-    ("gateway & routing", "AIBrix · Semantic Router · Xinference", ["M", "M", "M", "M", "S"]),
-    ("streaming & requests", "Xinference", ["M", "M", "M", "M", "M"]),
-    ("deployment config", "GPUStack · AIBrix · Xinference", ["S", "S", "SR", "S"]),
-    ("tooling & libraries", "REA · SQLFluff · guidellm · QuantLib", ["S", "S", "S", "S"]),
-    ("autoscaling", "AIBrix", ["S", "M", "S"]),
-    ("batch API", "AIBrix", ["MR", "M", "M"]),
-]
+def _ledger():
+    """Merged upstream PRs by area, largest area first, oldest PR first. Size: "M" = 100+ changed lines, "S" = under
+    100. "R" marks a release regression found by bisecting a release pair (the ledger's "regression" flag)."""
+    areas = {}
+    for p in sorted(PRS, key=lambda p: (p["merged"], p["repo"], p["number"])):
+        areas.setdefault(p["area"], []).append(p)
+    return [(area, " · ".join(name(r) for r, _ in Counter(p["repo"] for p in prs).most_common()),
+             [p["size"] + ("R" if p["regression"] else "") for p in prs])
+            for area, prs in sorted(areas.items(), key=lambda kv: (-len(kv[1]), kv[0]))]
+
+
+LEDGER = _ledger()
 
 
 def ledger(p):
@@ -214,7 +235,9 @@ def ledger(p):
     total = sum(len(r[2]) for r in LEDGER)
     medium = sum(1 for r in LEDGER for b in r[2] if b.startswith("M"))
     regress = sum(1 for r in LEDGER for b in r[2] if b.endswith("R"))
-    x_lab, x_bar, unit, bw, bh = 44, 236, 34, 28, 14
+    x_lab, x_bar, bh = 44, 236, 14
+    unit = min(34, (790 - x_bar) // max(len(r[2]) for r in LEDGER))  # long rows shrink their blocks to fit
+    bw = unit - 6
     y0, step = 116, 30
     rows, k = [], 0
     for i, (area, where, blocks) in enumerate(LEDGER):
@@ -269,13 +292,41 @@ def ledger(p):
 """
 
 
+def readme():
+    total = len(PRS)
+    medium = sum(1 for p in PRS if p["size"] == "M")
+    regress = sum(1 for p in PRS if p["regression"])
+    top = f"{FACTS['aibrix']} in vLLM AIBrix and {FACTS['xinference']} in Xinference"
+    areas = ", ".join(f"{area.replace('&', 'and')} {len(blocks)}" for area, _, blocks in LEDGER)
+    query = "author:Jackmeson1 is:pr is:merged " + " ".join(f"repo:{r}" for r in sorted(REPO_COUNTS))
+    link = f"https://github.com/search?q={quote_plus(query)}&type=pullrequests&s=created&o=desc"
+    return f"""<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/card-dark.svg">
+  <img alt="Jack. SDET, agentic workflows, open source. Agentic coding is here. Open source iterates faster than ever. I'm in: finding, fixing, getting it merged." src="assets/card-light.svg" width="100%">
+</picture>
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/flow-dark.svg">
+  <img alt="How I work: agents sweep and reproduce, a second model reviews, I decide and ship. {total} merged upstream PRs, {top}." src="assets/flow-light.svg" width="100%">
+</picture>
+
+<a href="{link}">
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/merged-dark.svg">
+  <img alt="What got merged: {total} upstream PRs across {FACTS['projects']} projects, {medium} medium and {total - medium} small, by area: {areas}; {regress} release regressions found by bisecting" src="assets/merged-light.svg" width="100%">
+</picture>
+</a>
+"""
+
+
 if __name__ == "__main__":
-    here = Path(__file__).parent
-    for old in here.glob("stats-*.svg"):
+    for old in HERE.glob("stats-*.svg"):
         old.unlink()
+    outputs = {HERE.parent / "README.md": readme()}
     for mode, pal in PALETTES.items():
-        for name, svg in ((f"card-{mode}.svg", card(pal)), (f"flow-{mode}.svg", workflow(pal)),
-                          (f"merged-{mode}.svg", ledger(pal))):
-            with open(here / name, "w", encoding="utf-8", newline="\n") as f:
-                f.write(svg)
-    print("built", sorted(p.name for p in here.glob("*.svg")))
+        outputs.update({HERE / f"card-{mode}.svg": card(pal), HERE / f"flow-{mode}.svg": workflow(pal),
+                        HERE / f"merged-{mode}.svg": ledger(pal)})
+    for path, text in outputs.items():
+        with open(path, "w", encoding="utf-8", newline="\n") as f:
+            f.write(text)
+    print("built", sorted(p.name for p in outputs), f"({FACTS['merged']} PRs, {FACTS['projects']} projects)")
