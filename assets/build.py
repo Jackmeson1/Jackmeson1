@@ -216,88 +216,81 @@ def workflow(p):
 """
 
 
+# The card shows four broad groups (user, 2026-10-21: "粗力度一点 写太长没人真正看"); ledger.json keeps the fine area.
+GROUPS = {
+    "gateway & routing": "Serving & routing", "streaming & requests": "Serving & routing",
+    "inference engines": "Serving & routing", "autoscaling": "Serving & routing", "batch API": "Serving & routing",
+    "orchestration": "Platform & ops", "storage & downloads": "Platform & ops", "deployment config": "Platform & ops",
+    "multimodal models": "Models", "image & video": "Models",
+    "tooling & libraries": "Libraries & tools",
+}
+
+
 def _ledger():
-    """Merged upstream PRs by area, largest area first, oldest PR first. Size: "M" = 100+ changed lines, "S" = under
-    100. "R" marks a release regression found by bisecting a release pair (the ledger's "regression" flag)."""
-    areas = {}
+    """Merged upstream PRs by broad group, largest first, oldest PR first. Size: "M" = 100+ changed lines, "S" = under
+    100."""
+    groups = {}
     for p in sorted(PRS, key=lambda p: (p["merged"], p["repo"], p["number"])):
-        areas.setdefault(p["area"], []).append(p)
-    return [(area, " · ".join(name(r) for r, _ in Counter(p["repo"] for p in prs).most_common()),
-             [p["size"] + ("R" if p["regression"] else "") for p in prs])
-            for area, prs in sorted(areas.items(), key=lambda kv: (-len(kv[1]), kv[0]))]
+        groups.setdefault(GROUPS.get(p["area"], p["area"]), []).append(p["size"])
+    return sorted(groups.items(), key=lambda kv: (-len(kv[1]), kv[0]))
 
 
 LEDGER = _ledger()
 
 
 def ledger(p):
-    """Every merged upstream PR as a block, grouped by area and coloured by size."""
-    total = sum(len(r[2]) for r in LEDGER)
-    medium = sum(1 for r in LEDGER for b in r[2] if b.startswith("M"))
-    regress = sum(1 for r in LEDGER for b in r[2] if b.endswith("R"))
-    x_lab, x_bar, bh = 44, 236, 14
-    unit = min(34, (790 - x_bar) // max(len(r[2]) for r in LEDGER))  # long rows shrink their blocks to fit
-    bw = unit - 6
-    y0, step = 116, 30
+    """Every merged upstream PR as a block, in four groups, coloured by size."""
+    total = sum(len(b) for _, b in LEDGER)
+    medium = sum(1 for _, b in LEDGER for s in b if s == "M")
+    x_lab, x_bar, bh = 44, 236, 18
+    unit = min(34, (790 - x_bar) // max(len(b) for _, b in LEDGER))  # long rows shrink their blocks to fit
+    bw = unit - 5
+    y0, step = 112, 40
     rows, k = [], 0
-    for i, (area, where, blocks) in enumerate(LEDGER):
+    for i, (group, blocks) in enumerate(LEDGER):
         y = y0 + i * step
         cells = []
         for j, b in enumerate(blocks):
             x = x_bar + j * unit
-            cls = "blk m" if b.startswith("M") else "blk s"
-            mark = (f'<path d="M{x + bw / 2} {y - bh - 9}l4 4-4 4-4-4z" class="reg"/>' if b.endswith("R") else "")
-            cells.append(f'<g class="pop" style="animation-delay:{0.35 + k * 0.05:.2f}s">'
-                         f'<rect x="{x}" y="{y - bh + 2}" width="{bw}" height="{bh}" rx="3" class="{cls}"/>{mark}</g>')
+            cells.append(f'<rect x="{x}" y="{y - bh + 4}" width="{bw}" height="{bh}" rx="3" '
+                         f'class="blk {"m" if b == "M" else "s"} pop" style="animation-delay:{0.3 + k * 0.025:.2f}s"/>')
             k += 1
         end = x_bar + len(blocks) * unit
-        rows.append(
-            f'<text x="{x_lab}" y="{y}" class="area">{escape(area)}</text>{"".join(cells)}'
-            f'<text x="{end + 4}" y="{y}" class="cnt">{len(blocks)}</text>'
-        )
-    y_foot = y0 + (len(LEDGER) - 1) * step + 40
-    others = FACTS["projects"] - 2
-    w, h = 880, y_foot + 28
+        rows.append(f'<text x="{x_lab}" y="{y}" class="area">{escape(group)}</text>{"".join(cells)}'
+                    f'<text x="{end + 6}" y="{y}" class="cnt">{len(blocks)}</text>')
+    w, h = 880, y0 + (len(LEDGER) - 1) * step + 36
     return f"""<svg xmlns="http://www.w3.org/2000/svg" width="{w}" height="{h}" viewBox="0 0 {w} {h}" role="img"
   aria-labelledby="t d">
   <title id="t">What got merged</title>
-  <desc id="d">{total} merged upstream pull requests, {medium} of them 100 or more changed lines. By area:
-    {escape('; '.join(f'{a} {len(b)}' for a, wh, b in LEDGER))}. {regress} were release regressions found by bisecting.
-    Across {FACTS['projects']} projects: AIBrix, Xinference and {others} others.</desc>
+  <desc id="d">{total} merged upstream pull requests across {FACTS['projects']} projects:
+    {escape('; '.join(f'{g} {len(b)}' for g, b in LEDGER))}. {medium} of them are 100 or more changed lines.</desc>
   <defs>{GRAIN.format(g=p['grain'])}</defs>
   <style>
     .kicker {{ font: 500 12px {MONO}; fill: {p['muted']}; letter-spacing: 2.6px; }}
     .motto {{ font: italic 400 16px {SERIF}; fill: {p['ink']}; }}
     .legend {{ font: 400 11px {MONO}; fill: {p['muted']}; }}
-    .area {{ font: 600 13px {MONO}; fill: {p['ink']}; }}
-    .cnt {{ font: 600 13px {MONO}; fill: {p['ink']}; }}
-    .where {{ font: 400 11.5px {MONO}; fill: {p['muted']}; }}
+    .area {{ font: 600 14px {MONO}; fill: {p['ink']}; }}
+    .cnt {{ font: 600 14px {MONO}; fill: {p['ink']}; }}
     .blk.m {{ fill: {p['seal']}; }}
     .blk.s {{ fill: {p['ink']}; opacity: .78; }}
-    .reg {{ fill: {p['seal']}; }}
     .pop {{ transform-box: fill-box; transform-origin: center; animation: pop .35s cubic-bezier(.3,1.5,.5,1) both; }}
     @keyframes pop {{ from {{ opacity: 0; transform: scale(.4); }} to {{ opacity: 1; transform: none; }} }}
     {REDUCE}
   </style>
   {frame(p, w, h)}
   <text x="44" y="46" class="kicker">WHAT GOT MERGED</text>
-  <text x="836" y="46" class="motto" text-anchor="end">{total} upstream PRs · {medium} medium · {total - medium} small</text>
-  <rect x="44" y="64" width="12" height="9" rx="2" class="blk m"/><text x="62" y="72" class="legend">100+ lines</text>
-  <rect x="152" y="64" width="12" height="9" rx="2" class="blk s"/><text x="170" y="72" class="legend">smaller</text>
-  <path d="M250 64l4 4-4 4-4-4z" class="reg"/><text x="262" y="72" class="legend">release regression, bisected</text>
+  <text x="836" y="46" class="motto" text-anchor="end">{total} PRs · {FACTS['projects']} projects</text>
+  <rect x="44" y="62" width="12" height="9" rx="2" class="blk m"/><text x="62" y="70" class="legend">100+ lines</text>
+  <rect x="152" y="62" width="12" height="9" rx="2" class="blk s"/><text x="170" y="70" class="legend">smaller</text>
   {''.join(rows)}
-  <line x1="44" y1="{y_foot - 18}" x2="836" y2="{y_foot - 18}" stroke="{p['rule']}"/>
-  <text x="44" y="{y_foot}" class="where">{FACTS['projects']} projects · AIBrix, Xinference and {others} others</text>
 </svg>
 """
 
 
 def readme():
     total = len(PRS)
-    medium = sum(1 for p in PRS if p["size"] == "M")
-    regress = sum(1 for p in PRS if p["regression"])
     top = f"{FACTS['aibrix']} in vLLM AIBrix and {FACTS['xinference']} in Xinference"
-    areas = ", ".join(f"{area.replace('&', 'and')} {len(blocks)}" for area, _, blocks in LEDGER)
+    groups = ", ".join(f"{g.replace('&', 'and').lower()} {len(b)}" for g, b in LEDGER)
     query = "author:Jackmeson1 is:pr is:merged " + " ".join(f"repo:{r}" for r in sorted(REPO_COUNTS))
     link = f"https://github.com/search?q={quote_plus(query)}&type=pullrequests&s=created&o=desc"
     return f"""<picture>
@@ -313,7 +306,7 @@ def readme():
 <a href="{link}">
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/merged-dark.svg">
-  <img alt="What got merged: {total} upstream PRs across {FACTS['projects']} projects, {medium} medium and {total - medium} small, by area: {areas}; {regress} release regressions found by bisecting" src="assets/merged-light.svg" width="100%">
+  <img alt="What got merged: {total} upstream PRs across {FACTS['projects']} projects: {groups}" src="assets/merged-light.svg" width="100%">
 </picture>
 </a>
 """

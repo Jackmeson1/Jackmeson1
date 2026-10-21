@@ -11,6 +11,6 @@
 <a href="https://github.com/search?q=author%3AJackmeson1+is%3Apr+is%3Amerged+repo%3Agpustack%2Fgpustack+repo%3Alballabio%2FQuantLib+repo%3Amorluto%2Frea+repo%3Asqlfluff%2Fsqlfluff+repo%3Avladmandic%2Fsdnext+repo%3Avllm-project%2Faibrix+repo%3Avllm-project%2Fguidellm+repo%3Avllm-project%2Fsemantic-router+repo%3Axorbitsai%2Finference&type=pullrequests&s=created&o=desc">
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/merged-dark.svg">
-  <img alt="What got merged: 63 upstream PRs across 9 projects, 36 medium and 27 small, by area: multimodal models 11, tooling and libraries 8, orchestration 7, storage and downloads 7, deployment config 6, gateway and routing 6, inference engines 5, streaming and requests 5, autoscaling 4, batch API 3, image and video 1; 2 release regressions found by bisecting" src="assets/merged-light.svg" width="100%">
+  <img alt="What got merged: 63 upstream PRs across 9 projects: serving and routing 23, platform and ops 20, models 12, libraries and tools 8" src="assets/merged-light.svg" width="100%">
 </picture>
 </a>
