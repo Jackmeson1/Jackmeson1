@@ -611,6 +611,46 @@
    "regression": false
   },
   {
+   "repo": "lballabio/QuantLib",
+   "number": 2879,
+   "merged": "2026-10-20",
+   "title": "Return zero theta for American options exercised at the root of the tree",
+   "lines": 167,
+   "size": "M",
+   "area": "tooling & libraries",
+   "regression": false
+  },
+  {
+   "repo": "lballabio/QuantLib",
+   "number": 2880,
+   "merged": "2026-10-20",
+   "title": "Handle degenerate correlations in `BivariateCumulativeNormalDistributionDr78`",
+   "lines": 155,
+   "size": "M",
+   "area": "tooling & libraries",
+   "regression": false
+  },
+  {
+   "repo": "lballabio/QuantLib",
+   "number": 2881,
+   "merged": "2026-10-20",
+   "title": "Price double knock-outs struck outside the corridor in the analytic engine",
+   "lines": 112,
+   "size": "M",
+   "area": "tooling & libraries",
+   "regression": false
+  },
+  {
+   "repo": "sqlfluff/sqlfluff",
+   "number": 8793,
+   "merged": "2026-10-20",
+   "title": "Keep aliases used in WINDOW and other SELECT clauses (AL05)",
+   "lines": 181,
+   "size": "M",
+   "area": "tooling & libraries",
+   "regression": false
+  },
+  {
    "repo": "vladmandic/sdnext",
    "number": 5164,
    "merged": "2026-10-20",
@@ -628,6 +668,46 @@
    "lines": 70,
    "size": "S",
    "area": "inference engines",
+   "regression": false
+  },
+  {
+   "repo": "xorbitsai/inference",
+   "number": 5760,
+   "merged": "2026-10-20",
+   "title": "fix(vllm): respect checkpoint quantization for fp8 models",
+   "lines": 181,
+   "size": "M",
+   "area": "inference engines",
+   "regression": false
+  },
+  {
+   "repo": "xorbitsai/inference",
+   "number": 5783,
+   "merged": "2026-10-20",
+   "title": "fix(vllm): honor tool_choice none in chat requests",
+   "lines": 88,
+   "size": "S",
+   "area": "inference engines",
+   "regression": false
+  },
+  {
+   "repo": "vladmandic/sdnext",
+   "number": 5166,
+   "merged": "2026-10-21",
+   "title": "fix(api): list registered settings at their defaults in GET /sdapi/v1/options",
+   "lines": 2,
+   "size": "S",
+   "area": "image & video",
+   "regression": false
+  },
+  {
+   "repo": "xorbitsai/inference",
+   "number": 5786,
+   "merged": "2026-10-21",
+   "title": "fix(worker): select distinct GPUs for multi-GPU allocations",
+   "lines": 63,
+   "size": "S",
+   "area": "orchestration",
    "regression": false
   }
  ]
