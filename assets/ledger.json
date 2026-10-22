@@ -701,6 +701,16 @@
    "regression": false
   },
   {
+   "repo": "vladmandic/sdnext",
+   "number": 5169,
+   "merged": "2026-10-21",
+   "title": "fix(wan): derive image defaults per invocation",
+   "lines": 8,
+   "size": "S",
+   "area": "image & video",
+   "regression": false
+  },
+  {
    "repo": "xorbitsai/inference",
    "number": 5786,
    "merged": "2026-10-21",
@@ -708,6 +718,36 @@
    "lines": 63,
    "size": "S",
    "area": "orchestration",
+   "regression": false
+  },
+  {
+   "repo": "xorbitsai/inference",
+   "number": 5796,
+   "merged": "2026-10-22",
+   "title": "fix(model): decode local file model URIs",
+   "lines": 62,
+   "size": "S",
+   "area": "inference engines",
+   "regression": false
+  },
+  {
+   "repo": "xorbitsai/inference",
+   "number": 5799,
+   "merged": "2026-10-22",
+   "title": "fix(llm): normalize tool-only history before counting tokens",
+   "lines": 168,
+   "size": "M",
+   "area": "inference engines",
+   "regression": false
+  },
+  {
+   "repo": "xorbitsai/inference",
+   "number": 5806,
+   "merged": "2026-10-22",
+   "title": "fix(llm): preserve tool-call history in null-content templates",
+   "lines": 397,
+   "size": "M",
+   "area": "inference engines",
    "regression": false
   }
  ]
