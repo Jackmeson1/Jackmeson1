@@ -721,6 +721,26 @@
    "regression": false
   },
   {
+   "repo": "vladmandic/sdnext",
+   "number": 5172,
+   "merged": "2026-10-22",
+   "title": "fix(te): invalidate stale prompt embeddings when encoder state changes",
+   "lines": 13,
+   "size": "S",
+   "area": "image & video",
+   "regression": false
+  },
+  {
+   "repo": "vllm-project/aibrix",
+   "number": 3203,
+   "merged": "2026-10-22",
+   "title": "[Bug] Recover KV event replay across every remaining sequence gap",
+   "lines": 166,
+   "size": "M",
+   "area": "gateway & routing",
+   "regression": false
+  },
+  {
    "repo": "xorbitsai/inference",
    "number": 5796,
    "merged": "2026-10-22",
@@ -748,6 +768,26 @@
    "lines": 397,
    "size": "M",
    "area": "inference engines",
+   "regression": false
+  },
+  {
+   "repo": "punkpeye/fastmcp",
+   "number": 458,
+   "merged": "2026-10-23",
+   "title": "fix: advertise Zod tool parameters by their input schema",
+   "lines": 356,
+   "size": "M",
+   "area": "tooling & libraries",
+   "regression": false
+  },
+  {
+   "repo": "punkpeye/fastmcp",
+   "number": 460,
+   "merged": "2026-10-23",
+   "title": "fix: route contextual elicitation through the originating request",
+   "lines": 229,
+   "size": "M",
+   "area": "tooling & libraries",
    "regression": false
   }
  ]
