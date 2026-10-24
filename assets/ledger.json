@@ -789,6 +789,26 @@
    "size": "M",
    "area": "tooling & libraries",
    "regression": false
+  },
+  {
+   "repo": "sqlfluff/sqlfluff",
+   "number": 8795,
+   "merged": "2026-10-23",
+   "title": "Preserve select order for positional column bindings in ST06",
+   "lines": 191,
+   "size": "M",
+   "area": "tooling & libraries",
+   "regression": false
+  },
+  {
+   "repo": "sqlfluff/sqlfluff",
+   "number": 8811,
+   "merged": "2026-10-23",
+   "title": "Keep following statements executable when CV06 moves a semicolon",
+   "lines": 47,
+   "size": "S",
+   "area": "tooling & libraries",
+   "regression": false
   }
  ]
 }
