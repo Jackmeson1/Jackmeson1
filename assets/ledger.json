@@ -809,6 +809,66 @@
    "size": "S",
    "area": "tooling & libraries",
    "regression": false
+  },
+  {
+   "repo": "xorbitsai/inference",
+   "number": 5838,
+   "merged": "2026-10-24",
+   "title": "fix(llm): forward Llama tools to vLLM, SGLang and MLX chat templates",
+   "lines": 129,
+   "size": "M",
+   "area": "inference engines",
+   "regression": false
+  },
+  {
+   "repo": "xorbitsai/inference",
+   "number": 5840,
+   "merged": "2026-10-24",
+   "title": "fix(llm): keep all DeepSeek-V3.1 tool calls completed in one engine text delta",
+   "lines": 180,
+   "size": "M",
+   "area": "inference engines",
+   "regression": false
+  },
+  {
+   "repo": "xorbitsai/inference",
+   "number": 5842,
+   "merged": "2026-10-24",
+   "title": "fix(llm): add DeepSeek-V3.2 reasoning tags",
+   "lines": 128,
+   "size": "M",
+   "area": "inference engines",
+   "regression": false
+  },
+  {
+   "repo": "xorbitsai/inference",
+   "number": 5844,
+   "merged": "2026-10-24",
+   "title": "fix(mlx): honor stop strings in serial and batched generation",
+   "lines": 892,
+   "size": "M",
+   "area": "inference engines",
+   "regression": false
+  },
+  {
+   "repo": "xorbitsai/inference",
+   "number": 5846,
+   "merged": "2026-10-24",
+   "title": "fix(llm): keep completion IDs stable across tool stream chunks",
+   "lines": 144,
+   "size": "M",
+   "area": "streaming & requests",
+   "regression": false
+  },
+  {
+   "repo": "xorbitsai/inference",
+   "number": 5848,
+   "merged": "2026-10-24",
+   "title": "fix(image): accept controlnet given as a list",
+   "lines": 86,
+   "size": "S",
+   "area": "multimodal models",
+   "regression": false
   }
  ]
 }
