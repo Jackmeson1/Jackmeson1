@@ -869,6 +869,106 @@
    "size": "S",
    "area": "multimodal models",
    "regression": false
+  },
+  {
+   "repo": "opensandbox-group/OpenSandbox",
+   "number": 2385,
+   "merged": "2026-10-25",
+   "title": "fix(server): reject trailing newlines in label and resource-name validation",
+   "lines": 85,
+   "size": "S",
+   "area": "tooling & libraries",
+   "regression": false
+  },
+  {
+   "repo": "opensandbox-group/OpenSandbox",
+   "number": 2387,
+   "merged": "2026-10-25",
+   "title": "fix(server): map concurrent Docker lifecycle conflicts to 404/409",
+   "lines": 278,
+   "size": "M",
+   "area": "tooling & libraries",
+   "regression": false
+  },
+  {
+   "repo": "xorbitsai/inference",
+   "number": 5857,
+   "merged": "2026-10-25",
+   "title": "fix(embedding): report each batched caller's token usage",
+   "lines": 448,
+   "size": "M",
+   "area": "inference engines",
+   "regression": false
+  },
+  {
+   "repo": "opensandbox-group/OpenSandbox",
+   "number": 2383,
+   "merged": "2026-10-26",
+   "title": "fix(server): validate network policy actions and reject unknown fields",
+   "lines": 251,
+   "size": "M",
+   "area": "tooling & libraries",
+   "regression": false
+  },
+  {
+   "repo": "opensandbox-group/OpenSandbox",
+   "number": 2405,
+   "merged": "2026-10-26",
+   "title": "fix(server): keep Docker createdAt stable and record pause/resume transitions",
+   "lines": 544,
+   "size": "M",
+   "area": "tooling & libraries",
+   "regression": false
+  },
+  {
+   "repo": "xorbitsai/inference",
+   "number": 5859,
+   "merged": "2026-10-26",
+   "title": "fix(flexible): handle omitted launcher arguments",
+   "lines": 77,
+   "size": "S",
+   "area": "inference engines",
+   "regression": false
+  },
+  {
+   "repo": "xorbitsai/inference",
+   "number": 5861,
+   "merged": "2026-10-26",
+   "title": "fix(llm): map native thinking modes in the shared chat renderer",
+   "lines": 84,
+   "size": "S",
+   "area": "streaming & requests",
+   "regression": false
+  },
+  {
+   "repo": "xorbitsai/inference",
+   "number": 5863,
+   "merged": "2026-10-26",
+   "title": "fix(llm): render text and image content in MiniCPM-V 2.6 and 4.5 templates",
+   "lines": 87,
+   "size": "S",
+   "area": "multimodal models",
+   "regression": false
+  },
+  {
+   "repo": "xorbitsai/inference",
+   "number": 5865,
+   "merged": "2026-10-26",
+   "title": "fix(llm): pass request chat template kwargs to the Qwen2-VL processor",
+   "lines": 53,
+   "size": "S",
+   "area": "multimodal models",
+   "regression": false
+  },
+  {
+   "repo": "xorbitsai/inference",
+   "number": 5867,
+   "merged": "2026-10-26",
+   "title": "fix(llm): normalize GLM-4.1V/4.5V text-only content blocks",
+   "lines": 78,
+   "size": "S",
+   "area": "inference engines",
+   "regression": false
   }
  ]
 }
