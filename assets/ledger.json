@@ -901,6 +901,16 @@
    "regression": false
   },
   {
+   "repo": "modelcontextprotocol/go-sdk",
+   "number": 1449,
+   "merged": "2026-10-26",
+   "title": "mcp: wrap ErrConnectionClosed for notifications and interrupted calls",
+   "lines": 355,
+   "size": "M",
+   "area": "tooling & libraries",
+   "regression": false
+  },
+  {
    "repo": "opensandbox-group/OpenSandbox",
    "number": 2383,
    "merged": "2026-10-26",
@@ -967,6 +977,76 @@
    "title": "fix(llm): normalize GLM-4.1V/4.5V text-only content blocks",
    "lines": 78,
    "size": "S",
+   "area": "inference engines",
+   "regression": false
+  },
+  {
+   "repo": "hao-ai-lab/FastVideo",
+   "number": 1997,
+   "merged": "2026-10-27",
+   "title": "[bugfix] Normalize local and HF-cache model paths before registry lookup",
+   "lines": 47,
+   "size": "S",
+   "area": "image & video",
+   "regression": false
+  },
+  {
+   "repo": "opensandbox-group/OpenSandbox",
+   "number": 2419,
+   "merged": "2026-10-27",
+   "title": "fix(sdk-python): round sub-millisecond command timeouts up to 1 ms",
+   "lines": 88,
+   "size": "S",
+   "area": "tooling & libraries",
+   "regression": false
+  },
+  {
+   "repo": "punkpeye/fastmcp",
+   "number": 465,
+   "merged": "2026-10-27",
+   "title": "fix(openapi): return a tool error when a response cannot satisfy the output schema",
+   "lines": 118,
+   "size": "M",
+   "area": "tooling & libraries",
+   "regression": false
+  },
+  {
+   "repo": "punkpeye/fastmcp",
+   "number": 467,
+   "merged": "2026-10-27",
+   "title": "fix: reject a second HTTP start and allow stopping twice",
+   "lines": 110,
+   "size": "M",
+   "area": "tooling & libraries",
+   "regression": false
+  },
+  {
+   "repo": "punkpeye/fastmcp",
+   "number": 469,
+   "merged": "2026-10-27",
+   "title": "fix: keep UserError messages visible when extras do not match the output schema",
+   "lines": 76,
+   "size": "S",
+   "area": "tooling & libraries",
+   "regression": false
+  },
+  {
+   "repo": "punkpeye/fastmcp",
+   "number": 471,
+   "merged": "2026-10-27",
+   "title": "fix: advertise object-valued union schemas with a root object type",
+   "lines": 372,
+   "size": "M",
+   "area": "tooling & libraries",
+   "regression": false
+  },
+  {
+   "repo": "xorbitsai/inference",
+   "number": 5875,
+   "merged": "2026-10-27",
+   "title": "fix(api): answer 400 for invalid requests on non-LLM endpoints",
+   "lines": 765,
+   "size": "M",
    "area": "inference engines",
    "regression": false
   }
