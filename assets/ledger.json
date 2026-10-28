@@ -981,6 +981,46 @@
    "regression": false
   },
   {
+   "repo": "Ephemeral-AI-Lab/layerfs",
+   "number": 468,
+   "merged": "2026-10-27",
+   "title": "fix(sdk): keep partial suffix lines out of coarse blame",
+   "lines": 216,
+   "size": "M",
+   "area": "tooling & libraries",
+   "regression": false
+  },
+  {
+   "repo": "Ephemeral-AI-Lab/layerfs",
+   "number": 471,
+   "merged": "2026-10-27",
+   "title": "fix(content): keep text a merge writes off a new file's other links",
+   "lines": 303,
+   "size": "M",
+   "area": "tooling & libraries",
+   "regression": false
+  },
+  {
+   "repo": "Ephemeral-AI-Lab/layerfs",
+   "number": 473,
+   "merged": "2026-10-27",
+   "title": "fix(storage): store FULL when a delta base alone exceeds the chain budget",
+   "lines": 759,
+   "size": "M",
+   "area": "tooling & libraries",
+   "regression": false
+  },
+  {
+   "repo": "Ephemeral-AI-Lab/layerfs",
+   "number": 475,
+   "merged": "2026-10-27",
+   "title": "fix(overlay): wake an orphan only when nothing awaits its captured layer",
+   "lines": 850,
+   "size": "M",
+   "area": "tooling & libraries",
+   "regression": false
+  },
+  {
    "repo": "hao-ai-lab/FastVideo",
    "number": 1997,
    "merged": "2026-10-27",
@@ -988,6 +1028,46 @@
    "lines": 47,
    "size": "S",
    "area": "image & video",
+   "regression": false
+  },
+  {
+   "repo": "lballabio/QuantLib",
+   "number": 2925,
+   "merged": "2026-10-27",
+   "title": "Price partial-time lookbacks when the carry is zero",
+   "lines": 256,
+   "size": "M",
+   "area": "tooling & libraries",
+   "regression": false
+  },
+  {
+   "repo": "lballabio/QuantLib",
+   "number": 2926,
+   "merged": "2026-10-27",
+   "title": "Stabilize the Levy Asian engine at low volatility",
+   "lines": 255,
+   "size": "M",
+   "area": "tooling & libraries",
+   "regression": false
+  },
+  {
+   "repo": "opensandbox-group/OpenSandbox",
+   "number": 2381,
+   "merged": "2026-10-27",
+   "title": "fix(sdk-go): keep line terminators when joining stdout events",
+   "lines": 40,
+   "size": "S",
+   "area": "tooling & libraries",
+   "regression": false
+  },
+  {
+   "repo": "opensandbox-group/OpenSandbox",
+   "number": 2408,
+   "merged": "2026-10-27",
+   "title": "fix(sdk-python): keep code-interpreter output fragments together in Execution.text",
+   "lines": 121,
+   "size": "M",
+   "area": "tooling & libraries",
    "regression": false
   },
   {
@@ -1046,6 +1126,66 @@
    "merged": "2026-10-27",
    "title": "fix(api): answer 400 for invalid requests on non-LLM endpoints",
    "lines": 765,
+   "size": "M",
+   "area": "inference engines",
+   "regression": false
+  },
+  {
+   "repo": "xorbitsai/inference",
+   "number": 5888,
+   "merged": "2026-10-27",
+   "title": "fix(llm): keep every text part and one system message in the InternVL prompt",
+   "lines": 168,
+   "size": "M",
+   "area": "inference engines",
+   "regression": false
+  },
+  {
+   "repo": "xorbitsai/inference",
+   "number": 5890,
+   "merged": "2026-10-28",
+   "title": "fix(llm): accept the documented string audio_url in chat messages",
+   "lines": 172,
+   "size": "M",
+   "area": "multimodal models",
+   "regression": false
+  },
+  {
+   "repo": "xorbitsai/inference",
+   "number": 5892,
+   "merged": "2026-10-28",
+   "title": "fix(api): pass every timestamp_granularities[] value to audio models",
+   "lines": 158,
+   "size": "M",
+   "area": "multimodal models",
+   "regression": false
+  },
+  {
+   "repo": "xorbitsai/inference",
+   "number": 5896,
+   "merged": "2026-10-28",
+   "title": "fix(transformers): select the dedicated classes for deepseek-vl2 and glm-4v",
+   "lines": 103,
+   "size": "M",
+   "area": "inference engines",
+   "regression": false
+  },
+  {
+   "repo": "xorbitsai/inference",
+   "number": 5898,
+   "merged": "2026-10-28",
+   "title": "fix(image): accept a one-element prompt list in SenseNova-U1 image editing",
+   "lines": 139,
+   "size": "M",
+   "area": "multimodal models",
+   "regression": false
+  },
+  {
+   "repo": "xorbitsai/inference",
+   "number": 5900,
+   "merged": "2026-10-28",
+   "title": "fix(llm): give Baichuan-M2 the Qwen tool parser",
+   "lines": 256,
    "size": "M",
    "area": "inference engines",
    "regression": false
