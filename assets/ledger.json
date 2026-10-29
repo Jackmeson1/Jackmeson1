@@ -1141,6 +1141,16 @@
    "regression": false
   },
   {
+   "repo": "opensandbox-group/OpenSandbox",
+   "number": 2447,
+   "merged": "2026-10-28",
+   "title": "fix(sdk-go): keep code-interpreter output fragments together in Execution.Text",
+   "lines": 219,
+   "size": "M",
+   "area": "tooling & libraries",
+   "regression": false
+  },
+  {
    "repo": "xorbitsai/inference",
    "number": 5890,
    "merged": "2026-10-28",
