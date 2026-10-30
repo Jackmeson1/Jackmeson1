@@ -1199,6 +1199,86 @@
    "size": "M",
    "area": "inference engines",
    "regression": false
+  },
+  {
+   "repo": "lballabio/QuantLib",
+   "number": 2954,
+   "merged": "2026-10-29",
+   "title": "Price Turnbull-Wakeman Asian options when every fixing is known",
+   "lines": 102,
+   "size": "M",
+   "area": "tooling & libraries",
+   "regression": false
+  },
+  {
+   "repo": "lballabio/QuantLib",
+   "number": 2955,
+   "merged": "2026-10-29",
+   "title": "Price Pearson spread puts when the conditional strike is not positive",
+   "lines": 94,
+   "size": "S",
+   "area": "tooling & libraries",
+   "regression": false
+  },
+  {
+   "repo": "sqlfluff/sqlfluff",
+   "number": 8867,
+   "merged": "2026-10-29",
+   "title": "Preserve expression precedence when ST02 negates a CASE",
+   "lines": 32,
+   "size": "S",
+   "area": "tooling & libraries",
+   "regression": false
+  },
+  {
+   "repo": "superradcompany/microsandbox",
+   "number": 1936,
+   "merged": "2026-10-29",
+   "title": "fix(cli): resolve bare host copy destinations against the current dir",
+   "lines": 236,
+   "size": "M",
+   "area": "tooling & libraries",
+   "regression": false
+  },
+  {
+   "repo": "superradcompany/microsandbox",
+   "number": 1944,
+   "merged": "2026-10-29",
+   "title": "fix(sdk/node): validate kill and connect timeouts before calling native",
+   "lines": 117,
+   "size": "M",
+   "area": "tooling & libraries",
+   "regression": false
+  },
+  {
+   "repo": "lballabio/QuantLib",
+   "number": 2958,
+   "merged": "2026-10-30",
+   "title": "Bound adaptive Gauss-Kronrod recursion and work",
+   "lines": 141,
+   "size": "M",
+   "area": "tooling & libraries",
+   "regression": false
+  },
+  {
+   "repo": "lballabio/QuantLib",
+   "number": 2960,
+   "merged": "2026-10-30",
+   "title": "Include the dividend yield in the replicating variance swap engine",
+   "lines": 100,
+   "size": "M",
+   "area": "tooling & libraries",
+   "regression": false
+  },
+  {
+   "repo": "xorbitsai/inference",
+   "number": 5922,
+   "merged": "2026-10-30",
+   "title": "fix(model): validate engine and lightning options before caching",
+   "lines": 526,
+   "size": "M",
+   "area": "inference engines",
+   "regression": false
   }
  ]
 }
