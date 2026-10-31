@@ -1271,11 +1271,81 @@
    "regression": false
   },
   {
+   "repo": "opensandbox-group/OpenSandbox",
+   "number": 2421,
+   "merged": "2026-10-30",
+   "title": "fix(server): reject duplicate and root Docker mount destinations with 400",
+   "lines": 187,
+   "size": "M",
+   "area": "tooling & libraries",
+   "regression": false
+  },
+  {
    "repo": "xorbitsai/inference",
    "number": 5922,
    "merged": "2026-10-30",
    "title": "fix(model): validate engine and lightning options before caching",
    "lines": 526,
+   "size": "M",
+   "area": "inference engines",
+   "regression": false
+  },
+  {
+   "repo": "xorbitsai/inference",
+   "number": 5933,
+   "merged": "2026-10-31",
+   "title": "fix(cli): handle unavailable engines in engine listings",
+   "lines": 55,
+   "size": "S",
+   "area": "inference engines",
+   "regression": false
+  },
+  {
+   "repo": "xorbitsai/inference",
+   "number": 5935,
+   "merged": "2026-10-31",
+   "title": "fix(audio): describe ModelScope-only builtin registrations",
+   "lines": 38,
+   "size": "S",
+   "area": "multimodal models",
+   "regression": false
+  },
+  {
+   "repo": "xorbitsai/inference",
+   "number": 5937,
+   "merged": "2026-10-31",
+   "title": "fix(core): canonicalize virtualenv package override names",
+   "lines": 85,
+   "size": "S",
+   "area": "deployment config",
+   "regression": false
+  },
+  {
+   "repo": "xorbitsai/inference",
+   "number": 5939,
+   "merged": "2026-10-31",
+   "title": "fix(ocr): validate the engine before caching",
+   "lines": 68,
+   "size": "S",
+   "area": "inference engines",
+   "regression": false
+  },
+  {
+   "repo": "xorbitsai/inference",
+   "number": 5941,
+   "merged": "2026-10-31",
+   "title": "fix(client): use error helpers in remaining request paths",
+   "lines": 132,
+   "size": "M",
+   "area": "inference engines",
+   "regression": false
+  },
+  {
+   "repo": "xorbitsai/inference",
+   "number": 5943,
+   "merged": "2026-10-31",
+   "title": "fix(embedding): select llama.cpp for matched GGUF specs",
+   "lines": 206,
    "size": "M",
    "area": "inference engines",
    "regression": false
