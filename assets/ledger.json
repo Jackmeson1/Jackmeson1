@@ -1291,6 +1291,16 @@
    "regression": false
   },
   {
+   "repo": "vllm-project/vllm",
+   "number": 64757,
+   "merged": "2026-10-31",
+   "title": "[Bugfix][Frontend] Report prompt_tokens_details in batched chat completions",
+   "lines": 70,
+   "size": "S",
+   "area": "tooling & libraries",
+   "regression": false
+  },
+  {
    "repo": "xorbitsai/inference",
    "number": 5933,
    "merged": "2026-10-31",
@@ -1346,6 +1356,56 @@
    "merged": "2026-10-31",
    "title": "fix(embedding): select llama.cpp for matched GGUF specs",
    "lines": 206,
+   "size": "M",
+   "area": "inference engines",
+   "regression": false
+  },
+  {
+   "repo": "cdk/cdk",
+   "number": 1359,
+   "merged": "2026-11-01",
+   "title": "Exclude bonds to hydrogen from order-specific bond counts",
+   "lines": 20,
+   "size": "S",
+   "area": "tooling & libraries",
+   "regression": false
+  },
+  {
+   "repo": "cdk/cdk",
+   "number": 1360,
+   "merged": "2026-11-01",
+   "title": "Use the heavy atom count in the FMF denominator",
+   "lines": 21,
+   "size": "S",
+   "area": "tooling & libraries",
+   "regression": false
+  },
+  {
+   "repo": "xorbitsai/inference",
+   "number": 5949,
+   "merged": "2026-11-01",
+   "title": "fix(llm): match local paths across registered hubs",
+   "lines": 239,
+   "size": "M",
+   "area": "inference engines",
+   "regression": false
+  },
+  {
+   "repo": "xorbitsai/inference",
+   "number": 5951,
+   "merged": "2026-11-01",
+   "title": "fix(model): validate auxiliary GGUF selections before caching",
+   "lines": 225,
+   "size": "M",
+   "area": "inference engines",
+   "regression": false
+  },
+  {
+   "repo": "xorbitsai/inference",
+   "number": 5953,
+   "merged": "2026-11-01",
+   "title": "fix(client): normalize trailing slashes in endpoints",
+   "lines": 130,
    "size": "M",
    "area": "inference engines",
    "regression": false
