@@ -8,7 +8,9 @@
    "lines": 239,
    "size": "M",
    "area": "storage & downloads",
-   "regression": false
+   "regression": false,
+   "severity": 3,
+   "reach": 2
   },
   {
    "repo": "vllm-project/aibrix",
@@ -18,7 +20,9 @@
    "lines": 40,
    "size": "S",
    "area": "storage & downloads",
-   "regression": false
+   "regression": false,
+   "severity": 3,
+   "reach": 1
   },
   {
    "repo": "vllm-project/aibrix",
@@ -28,7 +32,9 @@
    "lines": 72,
    "size": "S",
    "area": "orchestration",
-   "regression": false
+   "regression": false,
+   "severity": 3,
+   "reach": 1
   },
   {
    "repo": "vllm-project/aibrix",
@@ -38,7 +44,9 @@
    "lines": 139,
    "size": "M",
    "area": "gateway & routing",
-   "regression": false
+   "regression": false,
+   "severity": 3,
+   "reach": 2
   },
   {
    "repo": "vllm-project/aibrix",
@@ -48,7 +56,9 @@
    "lines": 115,
    "size": "M",
    "area": "storage & downloads",
-   "regression": false
+   "regression": false,
+   "severity": 3,
+   "reach": 2
   },
   {
    "repo": "vllm-project/aibrix",
@@ -58,7 +68,9 @@
    "lines": 96,
    "size": "S",
    "area": "orchestration",
-   "regression": false
+   "regression": false,
+   "severity": 2,
+   "reach": 1
   },
   {
    "repo": "vllm-project/aibrix",
@@ -68,7 +80,9 @@
    "lines": 51,
    "size": "S",
    "area": "autoscaling",
-   "regression": false
+   "regression": false,
+   "severity": 3,
+   "reach": 1
   },
   {
    "repo": "vllm-project/aibrix",
@@ -78,7 +92,9 @@
    "lines": 79,
    "size": "S",
    "area": "storage & downloads",
-   "regression": false
+   "regression": false,
+   "severity": 2,
+   "reach": 2
   },
   {
    "repo": "vllm-project/semantic-router",
@@ -88,7 +104,9 @@
    "lines": 197,
    "size": "M",
    "area": "gateway & routing",
-   "regression": false
+   "regression": false,
+   "severity": 4,
+   "reach": 2
   },
   {
    "repo": "gpustack/gpustack",
@@ -98,7 +116,9 @@
    "lines": 17,
    "size": "S",
    "area": "deployment config",
-   "regression": false
+   "regression": false,
+   "severity": 3,
+   "reach": 1
   },
   {
    "repo": "gpustack/gpustack",
@@ -108,7 +128,9 @@
    "lines": 58,
    "size": "S",
    "area": "deployment config",
-   "regression": false
+   "regression": false,
+   "severity": 3,
+   "reach": 2
   },
   {
    "repo": "vllm-project/aibrix",
@@ -118,7 +140,9 @@
    "lines": 132,
    "size": "M",
    "area": "autoscaling",
-   "regression": false
+   "regression": false,
+   "severity": 4,
+   "reach": 2
   },
   {
    "repo": "vllm-project/aibrix",
@@ -128,7 +152,9 @@
    "lines": 28,
    "size": "S",
    "area": "autoscaling",
-   "regression": false
+   "regression": false,
+   "severity": 2,
+   "reach": 1
   },
   {
    "repo": "vllm-project/semantic-router",
@@ -138,7 +164,9 @@
    "lines": 584,
    "size": "M",
    "area": "gateway & routing",
-   "regression": false
+   "regression": false,
+   "severity": 4,
+   "reach": 2
   },
   {
    "repo": "morluto/rea",
@@ -148,7 +176,9 @@
    "lines": 37,
    "size": "S",
    "area": "tooling & libraries",
-   "regression": false
+   "regression": false,
+   "severity": 4,
+   "reach": 1
   },
   {
    "repo": "vllm-project/aibrix",
@@ -158,7 +188,9 @@
    "lines": 84,
    "size": "S",
    "area": "storage & downloads",
-   "regression": false
+   "regression": false,
+   "severity": 3,
+   "reach": 1
   },
   {
    "repo": "vllm-project/aibrix",
@@ -168,7 +200,9 @@
    "lines": 342,
    "size": "M",
    "area": "orchestration",
-   "regression": false
+   "regression": false,
+   "severity": 3,
+   "reach": 2
   },
   {
    "repo": "vllm-project/aibrix",
@@ -178,7 +212,9 @@
    "lines": 237,
    "size": "M",
    "area": "storage & downloads",
-   "regression": false
+   "regression": false,
+   "severity": 4,
+   "reach": 2
   },
   {
    "repo": "vllm-project/aibrix",
@@ -188,7 +224,9 @@
    "lines": 434,
    "size": "M",
    "area": "gateway & routing",
-   "regression": false
+   "regression": false,
+   "severity": 2,
+   "reach": 2
   },
   {
    "repo": "vllm-project/aibrix",
@@ -198,7 +236,9 @@
    "lines": 57,
    "size": "S",
    "area": "storage & downloads",
-   "regression": false
+   "regression": false,
+   "severity": 3,
+   "reach": 1
   },
   {
    "repo": "vllm-project/aibrix",
@@ -208,7 +248,9 @@
    "lines": 381,
    "size": "M",
    "area": "batch API",
-   "regression": true
+   "regression": true,
+   "severity": 4,
+   "reach": 2
   },
   {
    "repo": "sqlfluff/sqlfluff",
@@ -218,7 +260,9 @@
    "lines": 36,
    "size": "S",
    "area": "tooling & libraries",
-   "regression": false
+   "regression": false,
+   "severity": 4,
+   "reach": 1
   },
   {
    "repo": "vllm-project/aibrix",
@@ -228,7 +272,9 @@
    "lines": 495,
    "size": "M",
    "area": "orchestration",
-   "regression": false
+   "regression": false,
+   "severity": 3,
+   "reach": 2
   },
   {
    "repo": "vllm-project/aibrix",
@@ -238,7 +284,9 @@
    "lines": 173,
    "size": "M",
    "area": "batch API",
-   "regression": false
+   "regression": false,
+   "severity": 3,
+   "reach": 2
   },
   {
    "repo": "vllm-project/aibrix",
@@ -248,7 +296,9 @@
    "lines": 10,
    "size": "S",
    "area": "deployment config",
-   "regression": true
+   "regression": true,
+   "severity": 2,
+   "reach": 2
   },
   {
    "repo": "vllm-project/aibrix",
@@ -258,7 +308,9 @@
    "lines": 153,
    "size": "M",
    "area": "batch API",
-   "regression": false
+   "regression": false,
+   "severity": 3,
+   "reach": 2
   },
   {
    "repo": "xorbitsai/inference",
@@ -268,7 +320,9 @@
    "lines": 96,
    "size": "S",
    "area": "streaming & requests",
-   "regression": false
+   "regression": false,
+   "severity": 3,
+   "reach": 2
   },
   {
    "repo": "xorbitsai/inference",
@@ -278,7 +332,9 @@
    "lines": 184,
    "size": "M",
    "area": "orchestration",
-   "regression": false
+   "regression": false,
+   "severity": 3,
+   "reach": 2
   },
   {
    "repo": "xorbitsai/inference",
@@ -288,7 +344,9 @@
    "lines": 188,
    "size": "M",
    "area": "inference engines",
-   "regression": false
+   "regression": false,
+   "severity": 4,
+   "reach": 2
   },
   {
    "repo": "lballabio/QuantLib",
@@ -298,7 +356,9 @@
    "lines": 78,
    "size": "S",
    "area": "tooling & libraries",
-   "regression": false
+   "regression": false,
+   "severity": 4,
+   "reach": 1
   },
   {
    "repo": "vllm-project/aibrix",
@@ -308,7 +368,9 @@
    "lines": 132,
    "size": "M",
    "area": "gateway & routing",
-   "regression": false
+   "regression": false,
+   "severity": 2,
+   "reach": 2
   },
   {
    "repo": "vllm-project/guidellm",
@@ -318,7 +380,9 @@
    "lines": 44,
    "size": "S",
    "area": "tooling & libraries",
-   "regression": false
+   "regression": false,
+   "severity": 3,
+   "reach": 2
   },
   {
    "repo": "xorbitsai/inference",
@@ -328,7 +392,9 @@
    "lines": 164,
    "size": "M",
    "area": "streaming & requests",
-   "regression": false
+   "regression": false,
+   "severity": 4,
+   "reach": 3
   },
   {
    "repo": "xorbitsai/inference",
@@ -338,7 +404,9 @@
    "lines": 97,
    "size": "S",
    "area": "inference engines",
-   "regression": false
+   "regression": false,
+   "severity": 4,
+   "reach": 2
   },
   {
    "repo": "xorbitsai/inference",
@@ -348,7 +416,9 @@
    "lines": 183,
    "size": "M",
    "area": "streaming & requests",
-   "regression": false
+   "regression": false,
+   "severity": 4,
+   "reach": 2
   },
   {
    "repo": "xorbitsai/inference",
@@ -358,7 +428,9 @@
    "lines": 497,
    "size": "M",
    "area": "streaming & requests",
-   "regression": false
+   "regression": false,
+   "severity": 3,
+   "reach": 3
   },
   {
    "repo": "xorbitsai/inference",
@@ -368,7 +440,9 @@
    "lines": 102,
    "size": "M",
    "area": "inference engines",
-   "regression": false
+   "regression": false,
+   "severity": 4,
+   "reach": 2
   },
   {
    "repo": "xorbitsai/inference",
@@ -378,7 +452,9 @@
    "lines": 389,
    "size": "M",
    "area": "inference engines",
-   "regression": false
+   "regression": false,
+   "severity": 3,
+   "reach": 2
   },
   {
    "repo": "xorbitsai/inference",
@@ -388,7 +464,9 @@
    "lines": 191,
    "size": "M",
    "area": "multimodal models",
-   "regression": false
+   "regression": false,
+   "severity": 4,
+   "reach": 2
   },
   {
    "repo": "xorbitsai/inference",
@@ -398,7 +476,9 @@
    "lines": 108,
    "size": "M",
    "area": "multimodal models",
-   "regression": false
+   "regression": false,
+   "severity": 4,
+   "reach": 3
   },
   {
    "repo": "xorbitsai/inference",
@@ -408,7 +488,9 @@
    "lines": 111,
    "size": "M",
    "area": "multimodal models",
-   "regression": false
+   "regression": false,
+   "severity": 4,
+   "reach": 2
   },
   {
    "repo": "xorbitsai/inference",
@@ -418,7 +500,9 @@
    "lines": 65,
    "size": "S",
    "area": "deployment config",
-   "regression": false
+   "regression": false,
+   "severity": 3,
+   "reach": 2
   },
   {
    "repo": "xorbitsai/inference",
@@ -428,7 +512,9 @@
    "lines": 194,
    "size": "M",
    "area": "streaming & requests",
-   "regression": false
+   "regression": false,
+   "severity": 3,
+   "reach": 2
   },
   {
    "repo": "sqlfluff/sqlfluff",
@@ -438,7 +524,9 @@
    "lines": 36,
    "size": "S",
    "area": "tooling & libraries",
-   "regression": false
+   "regression": false,
+   "severity": 4,
+   "reach": 2
   },
   {
    "repo": "sqlfluff/sqlfluff",
@@ -448,7 +536,9 @@
    "lines": 33,
    "size": "S",
    "area": "tooling & libraries",
-   "regression": false
+   "regression": false,
+   "severity": 3,
+   "reach": 1
   },
   {
    "repo": "vllm-project/aibrix",
@@ -458,7 +548,9 @@
    "lines": 1468,
    "size": "M",
    "area": "orchestration",
-   "regression": false
+   "regression": false,
+   "severity": 3,
+   "reach": 2
   },
   {
    "repo": "xorbitsai/inference",
@@ -468,7 +560,9 @@
    "lines": 281,
    "size": "M",
    "area": "multimodal models",
-   "regression": false
+   "regression": false,
+   "severity": 2,
+   "reach": 2
   },
   {
    "repo": "xorbitsai/inference",
@@ -478,7 +572,9 @@
    "lines": 117,
    "size": "M",
    "area": "deployment config",
-   "regression": false
+   "regression": false,
+   "severity": 3,
+   "reach": 2
   },
   {
    "repo": "xorbitsai/inference",
@@ -488,7 +584,9 @@
    "lines": 41,
    "size": "S",
    "area": "multimodal models",
-   "regression": false
+   "regression": false,
+   "severity": 2,
+   "reach": 1
   },
   {
    "repo": "xorbitsai/inference",
@@ -498,7 +596,9 @@
    "lines": 71,
    "size": "S",
    "area": "multimodal models",
-   "regression": false
+   "regression": false,
+   "severity": 2,
+   "reach": 1
   },
   {
    "repo": "xorbitsai/inference",
@@ -508,7 +608,9 @@
    "lines": 183,
    "size": "M",
    "area": "multimodal models",
-   "regression": false
+   "regression": false,
+   "severity": 2,
+   "reach": 1
   },
   {
    "repo": "gpustack/gpustack",
@@ -518,7 +620,9 @@
    "lines": 106,
    "size": "M",
    "area": "deployment config",
-   "regression": false
+   "regression": false,
+   "severity": 3,
+   "reach": 2
   },
   {
    "repo": "lballabio/QuantLib",
@@ -528,7 +632,9 @@
    "lines": 91,
    "size": "S",
    "area": "tooling & libraries",
-   "regression": false
+   "regression": false,
+   "severity": 4,
+   "reach": 1
   },
   {
    "repo": "lballabio/QuantLib",
@@ -538,7 +644,9 @@
    "lines": 244,
    "size": "M",
    "area": "tooling & libraries",
-   "regression": false
+   "regression": false,
+   "severity": 4,
+   "reach": 2
   },
   {
    "repo": "vllm-project/aibrix",
@@ -548,7 +656,9 @@
    "lines": 178,
    "size": "M",
    "area": "autoscaling",
-   "regression": false
+   "regression": false,
+   "severity": 4,
+   "reach": 2
   },
   {
    "repo": "vllm-project/aibrix",
@@ -558,7 +668,9 @@
    "lines": 399,
    "size": "M",
    "area": "orchestration",
-   "regression": false
+   "regression": false,
+   "severity": 3,
+   "reach": 1
   },
   {
    "repo": "vllm-project/aibrix",
@@ -568,7 +680,9 @@
    "lines": 259,
    "size": "M",
    "area": "gateway & routing",
-   "regression": false
+   "regression": false,
+   "severity": 4,
+   "reach": 2
   },
   {
    "repo": "xorbitsai/inference",
@@ -578,7 +692,9 @@
    "lines": 78,
    "size": "S",
    "area": "multimodal models",
-   "regression": false
+   "regression": false,
+   "severity": 4,
+   "reach": 2
   },
   {
    "repo": "xorbitsai/inference",
@@ -588,7 +704,9 @@
    "lines": 108,
    "size": "M",
    "area": "multimodal models",
-   "regression": false
+   "regression": false,
+   "severity": 4,
+   "reach": 2
   },
   {
    "repo": "xorbitsai/inference",
@@ -598,7 +716,9 @@
    "lines": 85,
    "size": "S",
    "area": "multimodal models",
-   "regression": false
+   "regression": false,
+   "severity": 4,
+   "reach": 2
   },
   {
    "repo": "xorbitsai/inference",
@@ -608,7 +728,9 @@
    "lines": 125,
    "size": "M",
    "area": "multimodal models",
-   "regression": false
+   "regression": false,
+   "severity": 2,
+   "reach": 1
   },
   {
    "repo": "lballabio/QuantLib",
@@ -618,7 +740,9 @@
    "lines": 167,
    "size": "M",
    "area": "tooling & libraries",
-   "regression": false
+   "regression": false,
+   "severity": 4,
+   "reach": 1
   },
   {
    "repo": "lballabio/QuantLib",
@@ -628,7 +752,9 @@
    "lines": 155,
    "size": "M",
    "area": "tooling & libraries",
-   "regression": false
+   "regression": false,
+   "severity": 4,
+   "reach": 1
   },
   {
    "repo": "lballabio/QuantLib",
@@ -638,7 +764,9 @@
    "lines": 112,
    "size": "M",
    "area": "tooling & libraries",
-   "regression": false
+   "regression": false,
+   "severity": 4,
+   "reach": 1
   },
   {
    "repo": "sqlfluff/sqlfluff",
@@ -648,7 +776,9 @@
    "lines": 181,
    "size": "M",
    "area": "tooling & libraries",
-   "regression": false
+   "regression": false,
+   "severity": 4,
+   "reach": 2
   },
   {
    "repo": "vladmandic/sdnext",
@@ -658,7 +788,9 @@
    "lines": 4,
    "size": "S",
    "area": "image & video",
-   "regression": false
+   "regression": false,
+   "severity": 3,
+   "reach": 2
   },
   {
    "repo": "xorbitsai/inference",
@@ -668,7 +800,9 @@
    "lines": 70,
    "size": "S",
    "area": "inference engines",
-   "regression": false
+   "regression": false,
+   "severity": 3,
+   "reach": 1
   },
   {
    "repo": "xorbitsai/inference",
@@ -678,7 +812,9 @@
    "lines": 181,
    "size": "M",
    "area": "inference engines",
-   "regression": false
+   "regression": false,
+   "severity": 3,
+   "reach": 2
   },
   {
    "repo": "xorbitsai/inference",
@@ -688,7 +824,9 @@
    "lines": 88,
    "size": "S",
    "area": "inference engines",
-   "regression": false
+   "regression": false,
+   "severity": 4,
+   "reach": 2
   },
   {
    "repo": "vladmandic/sdnext",
@@ -698,7 +836,9 @@
    "lines": 2,
    "size": "S",
    "area": "image & video",
-   "regression": false
+   "regression": false,
+   "severity": 2,
+   "reach": 2
   },
   {
    "repo": "vladmandic/sdnext",
@@ -708,7 +848,9 @@
    "lines": 8,
    "size": "S",
    "area": "image & video",
-   "regression": false
+   "regression": false,
+   "severity": 3,
+   "reach": 2
   },
   {
    "repo": "xorbitsai/inference",
@@ -718,7 +860,9 @@
    "lines": 63,
    "size": "S",
    "area": "orchestration",
-   "regression": false
+   "regression": false,
+   "severity": 3,
+   "reach": 2
   },
   {
    "repo": "vladmandic/sdnext",
@@ -728,7 +872,9 @@
    "lines": 13,
    "size": "S",
    "area": "image & video",
-   "regression": false
+   "regression": false,
+   "severity": 4,
+   "reach": 2
   },
   {
    "repo": "vllm-project/aibrix",
@@ -738,7 +884,9 @@
    "lines": 166,
    "size": "M",
    "area": "gateway & routing",
-   "regression": false
+   "regression": false,
+   "severity": 3,
+   "reach": 2
   },
   {
    "repo": "xorbitsai/inference",
@@ -748,7 +896,9 @@
    "lines": 62,
    "size": "S",
    "area": "inference engines",
-   "regression": false
+   "regression": false,
+   "severity": 3,
+   "reach": 2
   },
   {
    "repo": "xorbitsai/inference",
@@ -758,7 +908,9 @@
    "lines": 168,
    "size": "M",
    "area": "inference engines",
-   "regression": false
+   "regression": false,
+   "severity": 3,
+   "reach": 2
   },
   {
    "repo": "xorbitsai/inference",
@@ -768,7 +920,9 @@
    "lines": 397,
    "size": "M",
    "area": "inference engines",
-   "regression": false
+   "regression": false,
+   "severity": 4,
+   "reach": 2
   },
   {
    "repo": "punkpeye/fastmcp",
@@ -778,7 +932,9 @@
    "lines": 356,
    "size": "M",
    "area": "tooling & libraries",
-   "regression": false
+   "regression": false,
+   "severity": 3,
+   "reach": 3
   },
   {
    "repo": "punkpeye/fastmcp",
@@ -788,7 +944,9 @@
    "lines": 229,
    "size": "M",
    "area": "tooling & libraries",
-   "regression": false
+   "regression": false,
+   "severity": 3,
+   "reach": 2
   },
   {
    "repo": "sqlfluff/sqlfluff",
@@ -798,7 +956,9 @@
    "lines": 191,
    "size": "M",
    "area": "tooling & libraries",
-   "regression": false
+   "regression": false,
+   "severity": 4,
+   "reach": 2
   },
   {
    "repo": "sqlfluff/sqlfluff",
@@ -808,7 +968,9 @@
    "lines": 47,
    "size": "S",
    "area": "tooling & libraries",
-   "regression": false
+   "regression": false,
+   "severity": 4,
+   "reach": 2
   },
   {
    "repo": "xorbitsai/inference",
@@ -818,7 +980,9 @@
    "lines": 129,
    "size": "M",
    "area": "inference engines",
-   "regression": false
+   "regression": false,
+   "severity": 4,
+   "reach": 2
   },
   {
    "repo": "xorbitsai/inference",
@@ -828,7 +992,9 @@
    "lines": 180,
    "size": "M",
    "area": "inference engines",
-   "regression": false
+   "regression": false,
+   "severity": 4,
+   "reach": 2
   },
   {
    "repo": "xorbitsai/inference",
@@ -838,7 +1004,9 @@
    "lines": 128,
    "size": "M",
    "area": "inference engines",
-   "regression": false
+   "regression": false,
+   "severity": 3,
+   "reach": 2
   },
   {
    "repo": "xorbitsai/inference",
@@ -848,7 +1016,9 @@
    "lines": 892,
    "size": "M",
    "area": "inference engines",
-   "regression": false
+   "regression": false,
+   "severity": 4,
+   "reach": 2
   },
   {
    "repo": "xorbitsai/inference",
@@ -858,7 +1028,9 @@
    "lines": 144,
    "size": "M",
    "area": "streaming & requests",
-   "regression": false
+   "regression": false,
+   "severity": 4,
+   "reach": 2
   },
   {
    "repo": "xorbitsai/inference",
@@ -868,7 +1040,9 @@
    "lines": 86,
    "size": "S",
    "area": "multimodal models",
-   "regression": false
+   "regression": false,
+   "severity": 3,
+   "reach": 1
   },
   {
    "repo": "opensandbox-group/OpenSandbox",
@@ -878,7 +1052,9 @@
    "lines": 85,
    "size": "S",
    "area": "tooling & libraries",
-   "regression": false
+   "regression": false,
+   "severity": 2,
+   "reach": 1
   },
   {
    "repo": "opensandbox-group/OpenSandbox",
@@ -888,7 +1064,9 @@
    "lines": 278,
    "size": "M",
    "area": "tooling & libraries",
-   "regression": false
+   "regression": false,
+   "severity": 2,
+   "reach": 2
   },
   {
    "repo": "xorbitsai/inference",
@@ -898,7 +1076,9 @@
    "lines": 448,
    "size": "M",
    "area": "inference engines",
-   "regression": false
+   "regression": false,
+   "severity": 4,
+   "reach": 2
   },
   {
    "repo": "modelcontextprotocol/go-sdk",
@@ -908,7 +1088,9 @@
    "lines": 355,
    "size": "M",
    "area": "tooling & libraries",
-   "regression": false
+   "regression": false,
+   "severity": 2,
+   "reach": 2
   },
   {
    "repo": "opensandbox-group/OpenSandbox",
@@ -918,7 +1100,9 @@
    "lines": 251,
    "size": "M",
    "area": "tooling & libraries",
-   "regression": false
+   "regression": false,
+   "severity": 2,
+   "reach": 2
   },
   {
    "repo": "opensandbox-group/OpenSandbox",
@@ -928,7 +1112,9 @@
    "lines": 544,
    "size": "M",
    "area": "tooling & libraries",
-   "regression": false
+   "regression": false,
+   "severity": 4,
+   "reach": 2
   },
   {
    "repo": "xorbitsai/inference",
@@ -938,7 +1124,9 @@
    "lines": 77,
    "size": "S",
    "area": "inference engines",
-   "regression": false
+   "regression": false,
+   "severity": 3,
+   "reach": 1
   },
   {
    "repo": "xorbitsai/inference",
@@ -948,7 +1136,9 @@
    "lines": 84,
    "size": "S",
    "area": "streaming & requests",
-   "regression": false
+   "regression": false,
+   "severity": 3,
+   "reach": 2
   },
   {
    "repo": "xorbitsai/inference",
@@ -958,7 +1148,9 @@
    "lines": 87,
    "size": "S",
    "area": "multimodal models",
-   "regression": false
+   "regression": false,
+   "severity": 4,
+   "reach": 1
   },
   {
    "repo": "xorbitsai/inference",
@@ -968,7 +1160,9 @@
    "lines": 53,
    "size": "S",
    "area": "multimodal models",
-   "regression": false
+   "regression": false,
+   "severity": 3,
+   "reach": 1
   },
   {
    "repo": "xorbitsai/inference",
@@ -978,7 +1172,9 @@
    "lines": 78,
    "size": "S",
    "area": "inference engines",
-   "regression": false
+   "regression": false,
+   "severity": 3,
+   "reach": 1
   },
   {
    "repo": "Ephemeral-AI-Lab/layerfs",
@@ -988,7 +1184,9 @@
    "lines": 216,
    "size": "M",
    "area": "tooling & libraries",
-   "regression": false
+   "regression": false,
+   "severity": 4,
+   "reach": 2
   },
   {
    "repo": "Ephemeral-AI-Lab/layerfs",
@@ -998,7 +1196,9 @@
    "lines": 303,
    "size": "M",
    "area": "tooling & libraries",
-   "regression": false
+   "regression": false,
+   "severity": 4,
+   "reach": 1
   },
   {
    "repo": "Ephemeral-AI-Lab/layerfs",
@@ -1008,7 +1208,9 @@
    "lines": 759,
    "size": "M",
    "area": "tooling & libraries",
-   "regression": false
+   "regression": false,
+   "severity": 2,
+   "reach": 1
   },
   {
    "repo": "Ephemeral-AI-Lab/layerfs",
@@ -1018,7 +1220,9 @@
    "lines": 850,
    "size": "M",
    "area": "tooling & libraries",
-   "regression": false
+   "regression": false,
+   "severity": 3,
+   "reach": 1
   },
   {
    "repo": "hao-ai-lab/FastVideo",
@@ -1028,7 +1232,9 @@
    "lines": 47,
    "size": "S",
    "area": "image & video",
-   "regression": false
+   "regression": false,
+   "severity": 3,
+   "reach": 2
   },
   {
    "repo": "lballabio/QuantLib",
@@ -1038,7 +1244,9 @@
    "lines": 256,
    "size": "M",
    "area": "tooling & libraries",
-   "regression": false
+   "regression": false,
+   "severity": 4,
+   "reach": 1
   },
   {
    "repo": "lballabio/QuantLib",
@@ -1048,7 +1256,9 @@
    "lines": 255,
    "size": "M",
    "area": "tooling & libraries",
-   "regression": false
+   "regression": false,
+   "severity": 4,
+   "reach": 1
   },
   {
    "repo": "opensandbox-group/OpenSandbox",
@@ -1058,7 +1268,9 @@
    "lines": 40,
    "size": "S",
    "area": "tooling & libraries",
-   "regression": false
+   "regression": false,
+   "severity": 4,
+   "reach": 2
   },
   {
    "repo": "opensandbox-group/OpenSandbox",
@@ -1068,7 +1280,9 @@
    "lines": 121,
    "size": "M",
    "area": "tooling & libraries",
-   "regression": false
+   "regression": false,
+   "severity": 4,
+   "reach": 2
   },
   {
    "repo": "opensandbox-group/OpenSandbox",
@@ -1078,7 +1292,9 @@
    "lines": 88,
    "size": "S",
    "area": "tooling & libraries",
-   "regression": false
+   "regression": false,
+   "severity": 2,
+   "reach": 1
   },
   {
    "repo": "punkpeye/fastmcp",
@@ -1088,7 +1304,9 @@
    "lines": 118,
    "size": "M",
    "area": "tooling & libraries",
-   "regression": false
+   "regression": false,
+   "severity": 2,
+   "reach": 2
   },
   {
    "repo": "punkpeye/fastmcp",
@@ -1098,7 +1316,9 @@
    "lines": 110,
    "size": "M",
    "area": "tooling & libraries",
-   "regression": false
+   "regression": false,
+   "severity": 2,
+   "reach": 1
   },
   {
    "repo": "punkpeye/fastmcp",
@@ -1108,7 +1328,9 @@
    "lines": 76,
    "size": "S",
    "area": "tooling & libraries",
-   "regression": false
+   "regression": false,
+   "severity": 2,
+   "reach": 2
   },
   {
    "repo": "punkpeye/fastmcp",
@@ -1118,7 +1340,9 @@
    "lines": 372,
    "size": "M",
    "area": "tooling & libraries",
-   "regression": false
+   "regression": false,
+   "severity": 3,
+   "reach": 2
   },
   {
    "repo": "xorbitsai/inference",
@@ -1128,7 +1352,9 @@
    "lines": 765,
    "size": "M",
    "area": "inference engines",
-   "regression": false
+   "regression": false,
+   "severity": 2,
+   "reach": 3
   },
   {
    "repo": "xorbitsai/inference",
@@ -1138,7 +1364,9 @@
    "lines": 168,
    "size": "M",
    "area": "inference engines",
-   "regression": false
+   "regression": false,
+   "severity": 4,
+   "reach": 1
   },
   {
    "repo": "opensandbox-group/OpenSandbox",
@@ -1148,7 +1376,9 @@
    "lines": 219,
    "size": "M",
    "area": "tooling & libraries",
-   "regression": false
+   "regression": false,
+   "severity": 4,
+   "reach": 2
   },
   {
    "repo": "xorbitsai/inference",
@@ -1158,7 +1388,9 @@
    "lines": 172,
    "size": "M",
    "area": "multimodal models",
-   "regression": false
+   "regression": false,
+   "severity": 3,
+   "reach": 2
   },
   {
    "repo": "xorbitsai/inference",
@@ -1168,7 +1400,9 @@
    "lines": 158,
    "size": "M",
    "area": "multimodal models",
-   "regression": false
+   "regression": false,
+   "severity": 4,
+   "reach": 1
   },
   {
    "repo": "xorbitsai/inference",
@@ -1178,7 +1412,9 @@
    "lines": 103,
    "size": "M",
    "area": "inference engines",
-   "regression": false
+   "regression": false,
+   "severity": 3,
+   "reach": 1
   },
   {
    "repo": "xorbitsai/inference",
@@ -1188,7 +1424,9 @@
    "lines": 139,
    "size": "M",
    "area": "multimodal models",
-   "regression": false
+   "regression": false,
+   "severity": 3,
+   "reach": 1
   },
   {
    "repo": "xorbitsai/inference",
@@ -1198,7 +1436,9 @@
    "lines": 256,
    "size": "M",
    "area": "inference engines",
-   "regression": false
+   "regression": false,
+   "severity": 3,
+   "reach": 1
   },
   {
    "repo": "lballabio/QuantLib",
@@ -1208,7 +1448,9 @@
    "lines": 102,
    "size": "M",
    "area": "tooling & libraries",
-   "regression": false
+   "regression": false,
+   "severity": 4,
+   "reach": 1
   },
   {
    "repo": "lballabio/QuantLib",
@@ -1218,7 +1460,9 @@
    "lines": 94,
    "size": "S",
    "area": "tooling & libraries",
-   "regression": false
+   "regression": false,
+   "severity": 4,
+   "reach": 1
   },
   {
    "repo": "sqlfluff/sqlfluff",
@@ -1228,7 +1472,9 @@
    "lines": 32,
    "size": "S",
    "area": "tooling & libraries",
-   "regression": false
+   "regression": false,
+   "severity": 4,
+   "reach": 1
   },
   {
    "repo": "superradcompany/microsandbox",
@@ -1238,7 +1484,9 @@
    "lines": 236,
    "size": "M",
    "area": "tooling & libraries",
-   "regression": false
+   "regression": false,
+   "severity": 3,
+   "reach": 2
   },
   {
    "repo": "superradcompany/microsandbox",
@@ -1248,7 +1496,9 @@
    "lines": 117,
    "size": "M",
    "area": "tooling & libraries",
-   "regression": false
+   "regression": false,
+   "severity": 2,
+   "reach": 1
   },
   {
    "repo": "lballabio/QuantLib",
@@ -1258,7 +1508,9 @@
    "lines": 141,
    "size": "M",
    "area": "tooling & libraries",
-   "regression": false
+   "regression": false,
+   "severity": 3,
+   "reach": 1
   },
   {
    "repo": "lballabio/QuantLib",
@@ -1268,7 +1520,9 @@
    "lines": 100,
    "size": "M",
    "area": "tooling & libraries",
-   "regression": false
+   "regression": false,
+   "severity": 4,
+   "reach": 2
   },
   {
    "repo": "opensandbox-group/OpenSandbox",
@@ -1278,7 +1532,9 @@
    "lines": 187,
    "size": "M",
    "area": "tooling & libraries",
-   "regression": false
+   "regression": false,
+   "severity": 2,
+   "reach": 1
   },
   {
    "repo": "xorbitsai/inference",
@@ -1288,7 +1544,9 @@
    "lines": 526,
    "size": "M",
    "area": "inference engines",
-   "regression": false
+   "regression": false,
+   "severity": 2,
+   "reach": 2
   },
   {
    "repo": "vllm-project/vllm",
@@ -1298,7 +1556,9 @@
    "lines": 70,
    "size": "S",
    "area": "tooling & libraries",
-   "regression": false
+   "regression": false,
+   "severity": 4,
+   "reach": 2
   },
   {
    "repo": "xorbitsai/inference",
@@ -1308,7 +1568,9 @@
    "lines": 55,
    "size": "S",
    "area": "inference engines",
-   "regression": false
+   "regression": false,
+   "severity": 2,
+   "reach": 2
   },
   {
    "repo": "xorbitsai/inference",
@@ -1318,7 +1580,9 @@
    "lines": 38,
    "size": "S",
    "area": "multimodal models",
-   "regression": false
+   "regression": false,
+   "severity": 2,
+   "reach": 1
   },
   {
    "repo": "xorbitsai/inference",
@@ -1328,7 +1592,9 @@
    "lines": 85,
    "size": "S",
    "area": "deployment config",
-   "regression": false
+   "regression": false,
+   "severity": 3,
+   "reach": 1
   },
   {
    "repo": "xorbitsai/inference",
@@ -1338,7 +1604,9 @@
    "lines": 68,
    "size": "S",
    "area": "inference engines",
-   "regression": false
+   "regression": false,
+   "severity": 2,
+   "reach": 1
   },
   {
    "repo": "xorbitsai/inference",
@@ -1348,7 +1616,9 @@
    "lines": 132,
    "size": "M",
    "area": "inference engines",
-   "regression": false
+   "regression": false,
+   "severity": 2,
+   "reach": 2
   },
   {
    "repo": "xorbitsai/inference",
@@ -1358,7 +1628,9 @@
    "lines": 206,
    "size": "M",
    "area": "inference engines",
-   "regression": false
+   "regression": false,
+   "severity": 3,
+   "reach": 2
   },
   {
    "repo": "cdk/cdk",
@@ -1368,7 +1640,9 @@
    "lines": 20,
    "size": "S",
    "area": "tooling & libraries",
-   "regression": false
+   "regression": false,
+   "severity": 4,
+   "reach": 1
   },
   {
    "repo": "cdk/cdk",
@@ -1378,7 +1652,9 @@
    "lines": 21,
    "size": "S",
    "area": "tooling & libraries",
-   "regression": false
+   "regression": false,
+   "severity": 4,
+   "reach": 1
   },
   {
    "repo": "xorbitsai/inference",
@@ -1388,7 +1664,9 @@
    "lines": 239,
    "size": "M",
    "area": "inference engines",
-   "regression": false
+   "regression": false,
+   "severity": 3,
+   "reach": 2
   },
   {
    "repo": "xorbitsai/inference",
@@ -1398,7 +1676,9 @@
    "lines": 225,
    "size": "M",
    "area": "inference engines",
-   "regression": false
+   "regression": false,
+   "severity": 2,
+   "reach": 1
   },
   {
    "repo": "xorbitsai/inference",
@@ -1408,7 +1688,9 @@
    "lines": 130,
    "size": "M",
    "area": "inference engines",
-   "regression": false
+   "regression": false,
+   "severity": 3,
+   "reach": 2
   }
  ]
 }

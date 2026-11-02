@@ -11,6 +11,6 @@
 <a href="https://github.com/search?q=author%3AJackmeson1+is%3Apr+is%3Amerged+repo%3AEphemeral-AI-Lab%2Flayerfs+repo%3Acdk%2Fcdk+repo%3Agpustack%2Fgpustack+repo%3Ahao-ai-lab%2FFastVideo+repo%3Alballabio%2FQuantLib+repo%3Amodelcontextprotocol%2Fgo-sdk+repo%3Amorluto%2Frea+repo%3Aopensandbox-group%2FOpenSandbox+repo%3Apunkpeye%2Ffastmcp+repo%3Asqlfluff%2Fsqlfluff+repo%3Asuperradcompany%2Fmicrosandbox+repo%3Avladmandic%2Fsdnext+repo%3Avllm-project%2Faibrix+repo%3Avllm-project%2Fguidellm+repo%3Avllm-project%2Fsemantic-router+repo%3Avllm-project%2Fvllm+repo%3Axorbitsai%2Finference&type=pullrequests&s=created&o=desc">
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/merged-dark.svg">
-  <img alt="What got merged: 141 upstream PRs across 17 projects: serving and routing 50, libraries and tools 46, models 23, platform and ops 22" src="assets/merged-light.svg" width="100%">
+  <img alt="What got merged: 141 upstream PRs across 17 projects: 9-12  high 5, 5-8  medium 71, 2-4  low 65" src="assets/merged-light.svg" width="100%">
 </picture>
 </a>

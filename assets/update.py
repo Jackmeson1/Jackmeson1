@@ -43,6 +43,13 @@ RULES = [
 ]
 
 
+# Severity from the title: first match wins, anything else is 3. Reach starts at 2. A guess for new PRs: edit ledger.json.
+SEVERITY_RULES = [
+    (r"(?i)\b(validate|reject|invalid|warn|error|timeouts?|describe|samples?)\b", 2),
+    (r"(?i)\b(keep|preserve|retain|honou?r|respect|wrong|stale|lose|lost|drop(ped|s)?|price|count)\b", 4),
+]
+
+
 def api(url):
     headers = {"Accept": "application/vnd.github+json", "X-GitHub-Api-Version": "2022-11-28"}
     if os.environ.get("GITHUB_TOKEN"):
@@ -68,6 +75,10 @@ def classify(repo, title):
             return area
 
 
+def severity_of(title):
+    return next((severity for pattern, severity in SEVERITY_RULES if re.search(pattern, title)), 3)
+
+
 def main():
     data = json.loads(LEDGER.read_text(encoding="utf-8")) if LEDGER.exists() else {"prs": []}
     known = {(p["repo"], p["number"]) for p in data["prs"]}
@@ -83,7 +94,7 @@ def main():
         added.append({
             "repo": repo, "number": item["number"], "merged": pr["merged_at"][:10], "title": item["title"],
             "lines": lines, "size": "M" if lines >= MEDIUM_LINES else "S",
-            "area": classify(repo, item["title"]), "regression": False,
+            "area": classify(repo, item["title"]), "severity": severity_of(item["title"]), "reach": 2, "regression": False,
         })
     if not added:
         print("ledger unchanged:", len(data["prs"]), "PRs")
