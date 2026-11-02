@@ -1691,6 +1691,78 @@
    "regression": false,
    "severity": 3,
    "reach": 2
+  },
+  {
+   "repo": "cdk/cdk",
+   "number": 1362,
+   "merged": "2026-11-02",
+   "title": "Build the TPSA and RDBE tables during class initialization",
+   "lines": 201,
+   "size": "M",
+   "area": "tooling & libraries",
+   "severity": 3,
+   "reach": 2,
+   "regression": false
+  },
+  {
+   "repo": "cdk/cdk",
+   "number": 1363,
+   "merged": "2026-11-02",
+   "title": "Count 8- and 9-membered rings in SmallRingDescriptor",
+   "lines": 24,
+   "size": "S",
+   "area": "tooling & libraries",
+   "severity": 4,
+   "reach": 2,
+   "regression": false
+  },
+  {
+   "repo": "punkpeye/fastmcp",
+   "number": 488,
+   "merged": "2026-11-02",
+   "title": "fix: send default stdio diagnostics to stderr",
+   "lines": 195,
+   "size": "M",
+   "area": "tooling & libraries",
+   "severity": 3,
+   "reach": 2,
+   "regression": false
+  },
+  {
+   "repo": "punkpeye/fastmcp",
+   "number": 490,
+   "merged": "2026-11-02",
+   "title": "fix: preserve Standard Schema issue path segments",
+   "lines": 291,
+   "size": "M",
+   "area": "tooling & libraries",
+   "severity": 4,
+   "reach": 2,
+   "regression": false
+  },
+  {
+   "repo": "punkpeye/fastmcp",
+   "number": 492,
+   "merged": "2026-11-02",
+   "title": "fix: load client roots without list-change notifications",
+   "lines": 82,
+   "size": "S",
+   "area": "tooling & libraries",
+   "severity": 3,
+   "reach": 2,
+   "regression": false
+  },
+  {
+   "repo": "punkpeye/fastmcp",
+   "number": 494,
+   "merged": "2026-11-02",
+   "title": "fix: preserve string resource-template arguments containing commas",
+   "lines": 95,
+   "size": "S",
+   "area": "tooling & libraries",
+   "severity": 4,
+   "reach": 2,
+   "regression": false
   }
  ]
 }
