@@ -284,8 +284,8 @@ def ledger(p):
     .area {{ font: 600 14px {MONO}; fill: {p['ink']}; }}
     .cnt {{ font: 600 14px {MONO}; fill: {p['ink']}; }}
     .blk.l {{ fill: {p['seal']}; }}
-    .blk.m {{ fill: {p['ink']}; opacity: .78; }}
-    .blk.s {{ fill: {p['ink']}; opacity: .28; }}
+    .blk.m {{ fill: {p['ink']}; fill-opacity: .78; }}
+    .blk.s {{ fill: {p['ink']}; fill-opacity: .28; }}
     .pop {{ transform-box: fill-box; transform-origin: center; animation: pop .35s cubic-bezier(.3,1.5,.5,1) both; }}
     @keyframes pop {{ from {{ opacity: 0; transform: scale(.4); }} to {{ opacity: 1; transform: none; }} }}
     {REDUCE}
