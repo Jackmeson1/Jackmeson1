@@ -1763,6 +1763,90 @@
    "severity": 4,
    "reach": 2,
    "regression": false
+  },
+  {
+   "repo": "sqlfluff/sqlfluff",
+   "number": 8959,
+   "merged": "2026-11-02",
+   "title": "Prevent LT14 exceptions on newlines inserted by an earlier fix",
+   "lines": 35,
+   "size": "S",
+   "area": "tooling & libraries",
+   "severity": 3,
+   "reach": 2,
+   "regression": false
+  },
+  {
+   "repo": "temporalio/sdk-python",
+   "number": 2054,
+   "merged": "2026-11-02",
+   "title": "Preserve an empty TLS table in envconfig dict conversion",
+   "lines": 68,
+   "size": "S",
+   "area": "tooling & libraries",
+   "severity": 4,
+   "reach": 2,
+   "regression": false
+  },
+  {
+   "repo": "temporalio/sdk-python",
+   "number": 2055,
+   "merged": "2026-11-02",
+   "title": "Restrict time.clock_gettime and clock_gettime_ns in the workflow sandbox",
+   "lines": 41,
+   "size": "S",
+   "area": "tooling & libraries",
+   "severity": 3,
+   "reach": 2,
+   "regression": false
+  },
+  {
+   "repo": "cdk/cdk",
+   "number": 1364,
+   "merged": "2026-11-03",
+   "title": "Match the double-bonded phosphorus row in TPSA",
+   "lines": 16,
+   "size": "S",
+   "area": "tooling & libraries",
+   "severity": 3,
+   "reach": 2,
+   "regression": false
+  },
+  {
+   "repo": "lballabio/QuantLib",
+   "number": 2983,
+   "merged": "2026-11-03",
+   "title": "Measure geometric average-strike Asian times from the valuation date",
+   "lines": 262,
+   "size": "M",
+   "area": "tooling & libraries",
+   "severity": 3,
+   "reach": 2,
+   "regression": false
+  },
+  {
+   "repo": "opensandbox-group/OpenSandbox",
+   "number": 2499,
+   "merged": "2026-11-03",
+   "title": "fix(server): reject trailing newlines in gateway, env-name and bucket validation",
+   "lines": 87,
+   "size": "S",
+   "area": "tooling & libraries",
+   "severity": 2,
+   "reach": 2,
+   "regression": false
+  },
+  {
+   "repo": "vllm-project/aibrix",
+   "number": 3380,
+   "merged": "2026-11-03",
+   "title": "[Bug] Follow listing pages in multipart upload cleanup",
+   "lines": 750,
+   "size": "M",
+   "area": "gateway & routing",
+   "severity": 3,
+   "reach": 2,
+   "regression": false
   }
  ]
 }
