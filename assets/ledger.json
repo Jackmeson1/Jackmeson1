@@ -1919,6 +1919,78 @@
    "severity": 3,
    "reach": 2,
    "regression": false
+  },
+  {
+   "repo": "xorbitsai/inference",
+   "number": 6005,
+   "merged": "2026-11-04",
+   "title": "fix(llm): reject registrations with colliding cache paths",
+   "lines": 536,
+   "size": "M",
+   "area": "inference engines",
+   "severity": 2,
+   "reach": 2,
+   "regression": false
+  },
+  {
+   "repo": "xorbitsai/inference",
+   "number": 6008,
+   "merged": "2026-11-04",
+   "title": "fix(client): accept image URLs in image_edit",
+   "lines": 448,
+   "size": "M",
+   "area": "multimodal models",
+   "severity": 3,
+   "reach": 2,
+   "regression": false
+  },
+  {
+   "repo": "xorbitsai/inference",
+   "number": 6009,
+   "merged": "2026-11-04",
+   "title": "fix(client): avoid blocking the event loop when constructing AsyncClient",
+   "lines": 595,
+   "size": "M",
+   "area": "inference engines",
+   "severity": 3,
+   "reach": 2,
+   "regression": false
+  },
+  {
+   "repo": "opensandbox-group/OpenSandbox",
+   "number": 2451,
+   "merged": "2026-11-05",
+   "title": "fix(execd): reject directory downloads and explain invalid Range errors",
+   "lines": 283,
+   "size": "M",
+   "area": "tooling & libraries",
+   "severity": 2,
+   "reach": 2,
+   "regression": false
+  },
+  {
+   "repo": "xorbitsai/inference",
+   "number": 6006,
+   "merged": "2026-11-05",
+   "title": "fix(llm): validate recorded custom LLM cache sources",
+   "lines": 1354,
+   "size": "M",
+   "area": "inference engines",
+   "severity": 2,
+   "reach": 2,
+   "regression": false
+  },
+  {
+   "repo": "xorbitsai/inference",
+   "number": 6011,
+   "merged": "2026-11-05",
+   "title": "fix(llm): align the DeepSeek-V3.2 tool prompt with its parser",
+   "lines": 665,
+   "size": "M",
+   "area": "inference engines",
+   "severity": 3,
+   "reach": 2,
+   "regression": false
   }
  ]
 }
