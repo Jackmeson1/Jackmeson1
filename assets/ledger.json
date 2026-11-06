@@ -1991,6 +1991,66 @@
    "severity": 3,
    "reach": 2,
    "regression": false
+  },
+  {
+   "repo": "cdk/cdk",
+   "number": 1367,
+   "merged": "2026-11-06",
+   "title": "Write PDB element symbols in columns 77-78",
+   "lines": 53,
+   "size": "S",
+   "area": "tooling & libraries",
+   "severity": 3,
+   "reach": 2,
+   "regression": false
+  },
+  {
+   "repo": "cdk/cdk",
+   "number": 1368,
+   "merged": "2026-11-06",
+   "title": "Match the element in common isotope lookups",
+   "lines": 31,
+   "size": "S",
+   "area": "tooling & libraries",
+   "severity": 3,
+   "reach": 2,
+   "regression": false
+  },
+  {
+   "repo": "cdk/cdk",
+   "number": 1370,
+   "merged": "2026-11-06",
+   "title": "Skip unknown double-bond parity when reading InChI",
+   "lines": 36,
+   "size": "S",
+   "area": "tooling & libraries",
+   "severity": 3,
+   "reach": 2,
+   "regression": false
+  },
+  {
+   "repo": "opensandbox-group/OpenSandbox",
+   "number": 2604,
+   "merged": "2026-11-06",
+   "title": "fix(execd): report Linux file birth time as created_at",
+   "lines": 121,
+   "size": "M",
+   "area": "tooling & libraries",
+   "severity": 3,
+   "reach": 2,
+   "regression": false
+  },
+  {
+   "repo": "opensandbox-group/OpenSandbox",
+   "number": 2606,
+   "merged": "2026-11-06",
+   "title": "fix(execd): emit Jupyter completion after successful execution finishes",
+   "lines": 482,
+   "size": "M",
+   "area": "tooling & libraries",
+   "severity": 3,
+   "reach": 2,
+   "regression": false
   }
  ]
 }
