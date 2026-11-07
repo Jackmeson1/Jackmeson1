@@ -2029,6 +2029,18 @@
    "regression": false
   },
   {
+   "repo": "lballabio/QuantLib",
+   "number": 3012,
+   "merged": "2026-11-06",
+   "title": "Reflect negative integer orders in modified Bessel I",
+   "lines": 37,
+   "size": "S",
+   "area": "tooling & libraries",
+   "severity": 3,
+   "reach": 2,
+   "regression": false
+  },
+  {
    "repo": "opensandbox-group/OpenSandbox",
    "number": 2604,
    "merged": "2026-11-06",
@@ -2049,6 +2061,18 @@
    "size": "M",
    "area": "tooling & libraries",
    "severity": 3,
+   "reach": 2,
+   "regression": false
+  },
+  {
+   "repo": "vllm-project/aibrix",
+   "number": 3409,
+   "merged": "2026-11-06",
+   "title": "[Bug] Honor Redis deadlines for admission and routing reads",
+   "lines": 491,
+   "size": "M",
+   "area": "gateway & routing",
+   "severity": 4,
    "reach": 2,
    "regression": false
   }
