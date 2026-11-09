@@ -2075,6 +2075,18 @@
    "severity": 4,
    "reach": 2,
    "regression": false
+  },
+  {
+   "repo": "opensandbox-group/OpenSandbox",
+   "number": 2576,
+   "merged": "2026-11-08",
+   "title": "fix(server): reject unknown fields in closed request objects",
+   "lines": 332,
+   "size": "M",
+   "area": "tooling & libraries",
+   "severity": 2,
+   "reach": 2,
+   "regression": false
   }
  ]
 }
