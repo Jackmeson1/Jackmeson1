@@ -2087,6 +2087,66 @@
    "severity": 2,
    "reach": 2,
    "regression": false
+  },
+  {
+   "repo": "cdk/cdk",
+   "number": 1383,
+   "merged": "2026-11-10",
+   "title": "Skip elements outside the MMElementRule table",
+   "lines": 31,
+   "size": "S",
+   "area": "tooling & libraries",
+   "severity": 3,
+   "reach": 2,
+   "regression": false
+  },
+  {
+   "repo": "cdk/cdk",
+   "number": 1384,
+   "merged": "2026-11-10",
+   "title": "Include bromine in RDBE calculations",
+   "lines": 29,
+   "size": "S",
+   "area": "tooling & libraries",
+   "severity": 3,
+   "reach": 2,
+   "regression": false
+  },
+  {
+   "repo": "lballabio/QuantLib",
+   "number": 3014,
+   "merged": "2026-11-10",
+   "title": "Preserve Newton and Halley estimates for `NewtonSafe` fallback",
+   "lines": 88,
+   "size": "S",
+   "area": "tooling & libraries",
+   "severity": 4,
+   "reach": 2,
+   "regression": false
+  },
+  {
+   "repo": "lballabio/QuantLib",
+   "number": 3015,
+   "merged": "2026-11-10",
+   "title": "Keep missing Greeks unavailable in `ForwardPerformanceVanillaEngine`",
+   "lines": 105,
+   "size": "M",
+   "area": "tooling & libraries",
+   "severity": 4,
+   "reach": 2,
+   "regression": false
+  },
+  {
+   "repo": "cdk/cdk",
+   "number": 1385,
+   "merged": "2026-11-11",
+   "title": "Preserve implicit hydrogens in polarizability calculations",
+   "lines": 460,
+   "size": "M",
+   "area": "tooling & libraries",
+   "severity": 4,
+   "reach": 2,
+   "regression": false
   }
  ]
 }
