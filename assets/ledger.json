@@ -2147,6 +2147,90 @@
    "severity": 4,
    "reach": 2,
    "regression": false
+  },
+  {
+   "repo": "LMCache/LMCache",
+   "number": 6088,
+   "merged": "2026-11-12",
+   "title": "[Bugfix][MP] List declared shared pools in /instances/usage while they are empty",
+   "lines": 71,
+   "size": "S",
+   "area": "tooling & libraries",
+   "severity": 3,
+   "reach": 2,
+   "regression": false
+  },
+  {
+   "repo": "cdk/cdk",
+   "number": 1391,
+   "merged": "2026-11-12",
+   "title": "Read MOL2 amide bonds without aromatic flags",
+   "lines": 126,
+   "size": "M",
+   "area": "tooling & libraries",
+   "severity": 3,
+   "reach": 2,
+   "regression": false
+  },
+  {
+   "repo": "xorbitsai/inference",
+   "number": 6073,
+   "merged": "2026-11-12",
+   "title": "fix(core): avoid restarting an in-flight crash recovery",
+   "lines": 134,
+   "size": "M",
+   "area": "inference engines",
+   "severity": 3,
+   "reach": 2,
+   "regression": false
+  },
+  {
+   "repo": "xorbitsai/inference",
+   "number": 6075,
+   "merged": "2026-11-12",
+   "title": "fix(realtime): settle forwarding tasks before backend teardown",
+   "lines": 64,
+   "size": "S",
+   "area": "inference engines",
+   "severity": 3,
+   "reach": 2,
+   "regression": false
+  },
+  {
+   "repo": "xorbitsai/inference",
+   "number": 6077,
+   "merged": "2026-11-12",
+   "title": "fix(realtime): accept media frames at the configured size limit",
+   "lines": 26,
+   "size": "S",
+   "area": "inference engines",
+   "severity": 3,
+   "reach": 2,
+   "regression": false
+  },
+  {
+   "repo": "xorbitsai/inference",
+   "number": 6090,
+   "merged": "2026-11-12",
+   "title": "fix(reload): preserve vLLM validation errors across actor calls",
+   "lines": 69,
+   "size": "S",
+   "area": "inference engines",
+   "severity": 4,
+   "reach": 2,
+   "regression": false
+  },
+  {
+   "repo": "xorbitsai/inference",
+   "number": 6091,
+   "merged": "2026-11-12",
+   "title": "fix(api): avoid aborting requests after rejected stream setup",
+   "lines": 95,
+   "size": "S",
+   "area": "streaming & requests",
+   "severity": 3,
+   "reach": 2,
+   "regression": false
   }
  ]
 }
