@@ -2173,6 +2173,18 @@
    "regression": false
   },
   {
+   "repo": "lballabio/QuantLib",
+   "number": 3016,
+   "merged": "2026-11-12",
+   "title": "Fix the gamma and chi-square CDFs for large parameters",
+   "lines": 102,
+   "size": "M",
+   "area": "tooling & libraries",
+   "severity": 3,
+   "reach": 2,
+   "regression": false
+  },
+  {
    "repo": "xorbitsai/inference",
    "number": 6073,
    "merged": "2026-11-12",
@@ -2229,6 +2241,18 @@
    "size": "S",
    "area": "streaming & requests",
    "severity": 3,
+   "reach": 2,
+   "regression": false
+  },
+  {
+   "repo": "xorbitsai/inference",
+   "number": 6094,
+   "merged": "2026-11-12",
+   "title": "fix(core): keep keyed chat and abort calls on the serving path",
+   "lines": 118,
+   "size": "M",
+   "area": "inference engines",
+   "severity": 4,
    "reach": 2,
    "regression": false
   }
