@@ -2255,6 +2255,78 @@
    "severity": 4,
    "reach": 2,
    "regression": false
+  },
+  {
+   "repo": "lballabio/QuantLib",
+   "number": 3042,
+   "merged": "2026-11-13",
+   "title": "Fix theta of the cliquet and performance engines on non-flat curves",
+   "lines": 125,
+   "size": "M",
+   "area": "tooling & libraries",
+   "severity": 3,
+   "reach": 2,
+   "regression": false
+  },
+  {
+   "repo": "cdk/cdk",
+   "number": 1399,
+   "merged": "2026-11-14",
+   "title": "Preserve SD property values containing angle brackets",
+   "lines": 50,
+   "size": "S",
+   "area": "tooling & libraries",
+   "severity": 4,
+   "reach": 2,
+   "regression": false
+  },
+  {
+   "repo": "cdk/cdk",
+   "number": 1400,
+   "merged": "2026-11-14",
+   "title": "Keep Gaussian input writer outputs independent",
+   "lines": 31,
+   "size": "S",
+   "area": "tooling & libraries",
+   "severity": 4,
+   "reach": 2,
+   "regression": false
+  },
+  {
+   "repo": "cdk/cdk",
+   "number": 1401,
+   "merged": "2026-11-14",
+   "title": "Honor the configured maximum in RDBERule",
+   "lines": 35,
+   "size": "S",
+   "area": "tooling & libraries",
+   "severity": 4,
+   "reach": 2,
+   "regression": false
+  },
+  {
+   "repo": "xorbitsai/inference",
+   "number": 6092,
+   "merged": "2026-11-14",
+   "title": "fix(core): reuse request IDs after completed tasks",
+   "lines": 265,
+   "size": "M",
+   "area": "inference engines",
+   "severity": 3,
+   "reach": 2,
+   "regression": false
+  },
+  {
+   "repo": "xorbitsai/inference",
+   "number": 6099,
+   "merged": "2026-11-14",
+   "title": "fix(audio): answer 400 for invalid Qwen3 vLLM audio requests",
+   "lines": 225,
+   "size": "M",
+   "area": "multimodal models",
+   "severity": 2,
+   "reach": 2,
+   "regression": false
   }
  ]
 }
