@@ -2425,6 +2425,30 @@
    "regression": false
   },
   {
+   "repo": "cdk/cdk",
+   "number": 1409,
+   "merged": "2026-11-15",
+   "title": "Add lone pairs to the clone in PiElectronegativityDescriptor",
+   "lines": 33,
+   "size": "S",
+   "area": "tooling & libraries",
+   "severity": 3,
+   "reach": 2,
+   "regression": false
+  },
+  {
+   "repo": "cdk/cdk",
+   "number": 1410,
+   "merged": "2026-11-15",
+   "title": "Reject proton removal beyond the available hydrogen count",
+   "lines": 13,
+   "size": "S",
+   "area": "tooling & libraries",
+   "severity": 2,
+   "reach": 2,
+   "regression": false
+  },
+  {
    "repo": "opensandbox-group/OpenSandbox",
    "number": 2612,
    "merged": "2026-11-15",
@@ -2457,6 +2481,30 @@
    "size": "M",
    "area": "inference engines",
    "severity": 2,
+   "reach": 2,
+   "regression": false
+  },
+  {
+   "repo": "xorbitsai/inference",
+   "number": 6127,
+   "merged": "2026-11-15",
+   "title": "fix(api): classify request ID admission conflicts",
+   "lines": 330,
+   "size": "M",
+   "area": "inference engines",
+   "severity": 3,
+   "reach": 2,
+   "regression": false
+  },
+  {
+   "repo": "xorbitsai/inference",
+   "number": 6131,
+   "merged": "2026-11-16",
+   "title": "fix(api): return 400 for unsupported cache_salt requests",
+   "lines": 283,
+   "size": "M",
+   "area": "inference engines",
+   "severity": 3,
    "reach": 2,
    "regression": false
   }
