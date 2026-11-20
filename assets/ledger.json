@@ -2903,6 +2903,78 @@
    "severity": 3,
    "reach": 2,
    "regression": false
+  },
+  {
+   "repo": "xorbitsai/inference",
+   "number": 6162,
+   "merged": "2026-11-19",
+   "title": "fix(api): validate benchmarks against the loaded context limit",
+   "lines": 91,
+   "size": "S",
+   "area": "inference engines",
+   "severity": 2,
+   "reach": 2,
+   "regression": false
+  },
+  {
+   "repo": "xorbitsai/inference",
+   "number": 6163,
+   "merged": "2026-11-19",
+   "title": "fix(core): validate Token Router backend limits against loaded context",
+   "lines": 99,
+   "size": "S",
+   "area": "streaming & requests",
+   "severity": 2,
+   "reach": 2,
+   "regression": false
+  },
+  {
+   "repo": "cdk/cdk",
+   "number": 1408,
+   "merged": "2026-11-20",
+   "title": "Preserve SD property values around numbered data fields",
+   "lines": 146,
+   "size": "M",
+   "area": "tooling & libraries",
+   "severity": 4,
+   "reach": 2,
+   "regression": false
+  },
+  {
+   "repo": "gazebosim/gz-sim",
+   "number": 4244,
+   "merged": "2026-11-20",
+   "title": "LookupWheelSlip: use the image width as the row stride",
+   "lines": 152,
+   "size": "M",
+   "area": "tooling & libraries",
+   "severity": 3,
+   "reach": 2,
+   "regression": false
+  },
+  {
+   "repo": "xorbitsai/inference",
+   "number": 6141,
+   "merged": "2026-11-20",
+   "title": "fix(api): avoid routing turns for audio capability queries",
+   "lines": 730,
+   "size": "M",
+   "area": "multimodal models",
+   "severity": 3,
+   "reach": 2,
+   "regression": false
+  },
+  {
+   "repo": "xorbitsai/inference",
+   "number": 6166,
+   "merged": "2026-11-20",
+   "title": "fix(api): honor the Token Router flag for Messages and Responses",
+   "lines": 146,
+   "size": "M",
+   "area": "streaming & requests",
+   "severity": 4,
+   "reach": 2,
+   "regression": false
   }
  ]
 }
