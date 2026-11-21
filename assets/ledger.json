@@ -2975,6 +2975,18 @@
    "severity": 4,
    "reach": 2,
    "regression": false
+  },
+  {
+   "repo": "xorbitsai/inference",
+   "number": 6167,
+   "merged": "2026-11-20",
+   "title": "fix(api): return 400 for unreadable cache session bodies",
+   "lines": 50,
+   "size": "S",
+   "area": "inference engines",
+   "severity": 3,
+   "reach": 2,
+   "regression": false
   }
  ]
 }
