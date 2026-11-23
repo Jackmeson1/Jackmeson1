@@ -2987,6 +2987,42 @@
    "severity": 3,
    "reach": 2,
    "regression": false
+  },
+  {
+   "repo": "cdk/cdk",
+   "number": 1425,
+   "merged": "2026-11-23",
+   "title": "Count the start atom in LargestPiSystemDescriptor",
+   "lines": 44,
+   "size": "S",
+   "area": "tooling & libraries",
+   "severity": 4,
+   "reach": 2,
+   "regression": false
+  },
+  {
+   "repo": "cdk/cdk",
+   "number": 1426,
+   "merged": "2026-11-23",
+   "title": "Fix MMFF94 bond classes for aryl-carbonyl and aryl-vinyl bonds",
+   "lines": 55,
+   "size": "S",
+   "area": "tooling & libraries",
+   "severity": 3,
+   "reach": 2,
+   "regression": false
+  },
+  {
+   "repo": "gazebosim/gz-sim",
+   "number": 4251,
+   "merged": "2026-11-23",
+   "title": "AdvancedLiftDrag: preserve aerodynamic force at zero angle of attack",
+   "lines": 187,
+   "size": "M",
+   "area": "tooling & libraries",
+   "severity": 4,
+   "reach": 2,
+   "regression": false
   }
  ]
 }
