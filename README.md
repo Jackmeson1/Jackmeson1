@@ -5,12 +5,12 @@
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/flow-dark.svg">
-  <img alt="How I work: agents sweep and reproduce, a second model reviews, I decide and ship. 252 merged upstream PRs, 30 in vLLM AIBrix and 90 in Xinference." src="assets/flow-light.svg" width="100%">
+  <img alt="How I work: agents sweep and reproduce, a second model reviews, I decide and ship. 253 merged upstream PRs, 30 in vLLM AIBrix and 91 in Xinference." src="assets/flow-light.svg" width="100%">
 </picture>
 
 <a href="https://github.com/search?q=author%3AJackmeson1+is%3Apr+is%3Amerged+repo%3AEphemeral-AI-Lab%2Flayerfs+repo%3ALMCache%2FLMCache+repo%3Acdk%2Fcdk+repo%3Agazebosim%2Fgz-sim+repo%3Agpustack%2Fgpustack+repo%3Ahao-ai-lab%2FFastVideo+repo%3Alballabio%2FQuantLib+repo%3Amodelcontextprotocol%2Fgo-sdk+repo%3Amorluto%2Frea+repo%3Aneuronsimulator%2Fnrn+repo%3Aopensandbox-group%2FOpenSandbox+repo%3Apunkpeye%2Ffastmcp+repo%3Asqlfluff%2Fsqlfluff+repo%3Asuperradcompany%2Fmicrosandbox+repo%3Atemporalio%2Fsdk-python+repo%3Avladmandic%2Fsdnext+repo%3Avllm-project%2Faibrix+repo%3Avllm-project%2Fguidellm+repo%3Avllm-project%2Fsemantic-router+repo%3Avllm-project%2Fvllm+repo%3Axorbitsai%2Finference&type=pullrequests&s=created&o=desc">
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/merged-dark.svg">
-  <img alt="What got merged: 252 upstream PRs across 21 projects: 9-12  high 5, 5-8  medium 166, 2-4  low 81" src="assets/merged-light.svg" width="100%">
+  <img alt="What got merged: 253 upstream PRs across 21 projects: 9-12  high 5, 5-8  medium 167, 2-4  low 81" src="assets/merged-light.svg" width="100%">
 </picture>
 </a>

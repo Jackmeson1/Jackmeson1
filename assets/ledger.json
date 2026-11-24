@@ -3023,6 +3023,18 @@
    "severity": 4,
    "reach": 2,
    "regression": false
+  },
+  {
+   "repo": "xorbitsai/inference",
+   "number": 6178,
+   "merged": "2026-11-23",
+   "title": "fix(api): accept realtime output messages at the configured size limit",
+   "lines": 63,
+   "size": "S",
+   "area": "inference engines",
+   "severity": 3,
+   "reach": 2,
+   "regression": false
   }
  ]
 }
