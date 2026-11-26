@@ -3035,6 +3035,66 @@
    "severity": 3,
    "reach": 2,
    "regression": false
+  },
+  {
+   "repo": "fonttools/fonttools",
+   "number": 4437,
+   "merged": "2026-11-25",
+   "title": "[TupleVariation] Reject explicit point counts above 32767",
+   "lines": 38,
+   "size": "S",
+   "area": "tooling & libraries",
+   "severity": 2,
+   "reach": 2,
+   "regression": false
+  },
+  {
+   "repo": "fonttools/fonttools",
+   "number": 4438,
+   "merged": "2026-11-25",
+   "title": "[ttLib] Forward recalculation options when opening collections",
+   "lines": 44,
+   "size": "S",
+   "area": "tooling & libraries",
+   "severity": 3,
+   "reach": 2,
+   "regression": false
+  },
+  {
+   "repo": "gazebosim/gz-sim",
+   "number": 4241,
+   "merged": "2026-11-25",
+   "title": "ForceTorque: shift the wrench to the sensor origin before rotating it",
+   "lines": 103,
+   "size": "M",
+   "area": "tooling & libraries",
+   "severity": 3,
+   "reach": 2,
+   "regression": false
+  },
+  {
+   "repo": "gazebosim/gz-sim",
+   "number": 4256,
+   "merged": "2026-11-25",
+   "title": "TrajectoryFollower: rotate the commanded wrench with the link orientation",
+   "lines": 159,
+   "size": "M",
+   "area": "tooling & libraries",
+   "severity": 3,
+   "reach": 2,
+   "regression": false
+  },
+  {
+   "repo": "gazebosim/gz-sim",
+   "number": 4270,
+   "merged": "2026-11-25",
+   "title": "JointController: update the shared PID once per step",
+   "lines": 129,
+   "size": "M",
+   "area": "tooling & libraries",
+   "severity": 3,
+   "reach": 2,
+   "regression": false
   }
  ]
 }
