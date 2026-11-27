@@ -3095,6 +3095,54 @@
    "severity": 3,
    "reach": 2,
    "regression": false
+  },
+  {
+   "repo": "fonttools/fonttools",
+   "number": 4462,
+   "merged": "2026-11-26",
+   "title": "[instancer] Preserve the caller's axis limits in static instancing",
+   "lines": 19,
+   "size": "S",
+   "area": "tooling & libraries",
+   "severity": 4,
+   "reach": 2,
+   "regression": false
+  },
+  {
+   "repo": "fonttools/fonttools",
+   "number": 4463,
+   "merged": "2026-11-26",
+   "title": "[recordingPen] Interpolate contours without on-curve points",
+   "lines": 58,
+   "size": "S",
+   "area": "tooling & libraries",
+   "severity": 3,
+   "reach": 2,
+   "regression": false
+  },
+  {
+   "repo": "fonttools/fonttools",
+   "number": 4464,
+   "merged": "2026-11-27",
+   "title": "[svgLib.path] Preserve the endpoint when converting arcs to cubics",
+   "lines": 40,
+   "size": "S",
+   "area": "tooling & libraries",
+   "severity": 4,
+   "reach": 2,
+   "regression": false
+  },
+  {
+   "repo": "xorbitsai/inference",
+   "number": 6194,
+   "merged": "2026-11-27",
+   "title": "fix(api): apply declared reasoning effort to Responses",
+   "lines": 254,
+   "size": "M",
+   "area": "inference engines",
+   "severity": 3,
+   "reach": 2,
+   "regression": false
   }
  ]
 }
